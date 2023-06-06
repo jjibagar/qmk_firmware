@@ -16,17 +16,15 @@
 #define ONESHOT_TAP_TOGGLE 5  /* Tapping this number of times holds the key until tapped once again. */
 #define ONESHOT_TIMEOUT 5000  /* Time (in ms) before the one shot key is released */
 
-//prevent normal rollover
-#define IGNORE_MOD_TAP_INTERRUPT
+
 
 // #define SPLIT_TRANSPORT_MIRROR // cuidado que lo has cambiado 
 #define SPLIT_LED_STATE_ENABLE
 #define SPLIT_LAYER_STATE_ENABLE
 
 
-
-#define DRIVER_LED_TOTAL 58
-#define DRIVER_COUNT 2
+#define RGB_MATRIX_LED_COUNT 58
+   //#define DRIVER_COUNT 2
 
 
  // Enable Caps Lock indicator using backlight (for keyboards without dedicated LED)
@@ -42,5 +40,6 @@
 
 
 
-#define UNICODE_SELECTED_MODES UC_LNX
+#define UNICODE_SELECTED_MODES UNICODE_MODE_LINUX
 #define UNICODE_KEY_LNX LCTL(LSFT(KC_F))
+
