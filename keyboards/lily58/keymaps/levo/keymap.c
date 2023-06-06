@@ -326,7 +326,7 @@ switch (keycode) {
         return false;
          case MACRO1:
     if (record->event.pressed) {
-      SEND_STRING("Jose Jorge Ibañez Garcia");  
+      SEND_STRING("");  
 							
         } else {
             
@@ -334,7 +334,7 @@ switch (keycode) {
         return false;
          case MACRO2:
     if (record->event.pressed) {
-            SEND_STRING("23029594Q");
+            SEND_STRING("");
         } else {
             
         }
@@ -348,14 +348,14 @@ switch (keycode) {
         return false;
 	  case MACRO4:
     if (record->event.pressed) {
-      SEND_STRING("5489133150712709");
+      SEND_STRING("");
         } else {
             
         }
         return false;
 	  case MACRO5:
     if (record->event.pressed) {
-      SEND_STRING("ES79 0073 0100 5206 5217 6501");
+      SEND_STRING("");
         } else {
             
         }
