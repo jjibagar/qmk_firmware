@@ -6,3 +6,8 @@ ENCODER_ENABLE = yes
 LTO_ENABLE = yes
 OLED_ENABLE = yes
 OLED_DRIVER = SSD1306
+
+
+#Sparkfun Config
+CONVERT_TO=promicro_rp2040
+BOOTLOADER = rp2040
