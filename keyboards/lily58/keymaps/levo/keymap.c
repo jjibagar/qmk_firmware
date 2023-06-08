@@ -339,7 +339,7 @@ switch (keycode) {
         return false;
          case MACRO2:
     if (record->event.pressed) {
-            SEND_STRING("dni");
+            SEND_STRING("");
         } else {
             
         }
