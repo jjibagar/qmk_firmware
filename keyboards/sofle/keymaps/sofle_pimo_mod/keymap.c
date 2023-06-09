@@ -62,7 +62,7 @@ KC_ESC,      KC_1,    KC_2,   KC_3, KC_4,    KC_5,                           KC_
 LALT_T(KC_TAB), TD(TD_PTO), TD(TD_PC),KC_E, KC_R,TD(TD_PASTE),               KC_Y, KC_U, DV_C,     DV_H,      DV_L,    KC_MINS,
 KC_LCTL,LGUI_T(DV_A),LALT_T(DV_O),LCTL_T(DV_E),LSFT_T(DV_U), DV_I,    DV_D,RSFT_T(DV_R),RCTL_T(DV_T),LALT_T(DV_N),RGUI_T(DV_S), KC_QUOT,
 LSFT_T(KC_CAPS),TD(TD_GUION),TD(TD_COPY),DV_J,DV_K,  DV_X,KC_MUTE,   XXXXXXX,DV_B,KC_M,KC_COMM,KC_DOT,KC_SLSH,RSFT_T(KC_CAPS),
-                     KC_LGUI,KC_LALT, KC_LGUI, MO(_LOWER), KC_SPC,     KC_ENT,KC_BSPC,MO(_RAISE), KC_RALT,KC_RGUI
+                     KC_LGUI,KC_LALT, KC_LGUI, MO(_LOWER), KC_SPC,     KC_ENT,KC_BSPC,_RAISE, KC_RALT,KC_RGUI
 ),
 /*
  * COLEMAK
@@ -85,7 +85,7 @@ LSFT_T(KC_CAPS),TD(TD_GUION),TD(TD_COPY),DV_J,DV_K,  DV_X,KC_MUTE,   XXXXXXX,DV_
   KC_ESC,   KC_Q,   KC_W,    KC_F,    KC_P,    KC_G,                      KC_J,    KC_L,    KC_U,    KC_Y, KC_SCLN,  KC_BSPC,
   KC_TAB,   KC_A,   KC_R,    KC_S,    KC_T,    KC_D,                      KC_H,    KC_N,    KC_E,    KC_I,    KC_O,  KC_QUOT,
   KC_LSFT,  KC_Z,   KC_X,    KC_C,    KC_V,    KC_B, KC_MUTE,      XXXXXXX,KC_K,    KC_M, KC_COMM,  KC_DOT, KC_SLSH,  KC_RSFT,
-                 KC_LGUI,KC_LALT,KC_LCTL,MO(_LOWER), KC_ENT,        KC_SPC,  MO(_RAISE), KC_RCTL, KC_RALT, KC_RGUI
+                 KC_LGUI,KC_LALT,KC_LCTL,MO(_LOWER), KC_ENT,        KC_SPC,  _RAISE, KC_RCTL, KC_RALT, KC_RGUI
 ),
 /* LOWER
  * ,-----------------------------------------.                    ,-----------------------------------------.
@@ -123,11 +123,11 @@ LSFT_T(KC_CAPS),TD(TD_GUION),TD(TD_COPY),DV_J,DV_K,  DV_X,KC_MUTE,   XXXXXXX,DV_
  *            `----------------------------------'           '------''---------------------------'
  */
 [_RAISE] = LAYOUT(
-  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                  XXXXXXX,  XXXXXXX, XXXXXXX, XXXXXXX, MACRO4, MACRO1,
-  XXXXXXX, DV_IQUE, DV_QUES, DV_IEXL, DV_EXLM, XXXXXXX,                  XXXXXXX,  KC_PGUP, XXXXXXX, KC_PSCR, MACRO5, MACRO2,
-  XXXXXXX, TAURUS,  UPARROW, XXXXXXX, XXXXXXX, XXXXXXX,                  KC_HOME,  KC_PGDN, KC_END, XXXXXXX, XXXXXXX,MACRO3,
-  XXXXXXX,LEFTARROW,DOWNARROW,RIGTHARROW,XXXXXXX, XXXXXXX,XXXXXXX ,   XXXXXXX, KC_PLUS, KC_MINS,KC_EQL, KC_LBRC, KC_RBRC, XXXXXXX,
-  DV_LCBR, _______, _______, _______,  KC_INS, _______,  _______, _______, _______,DV_RCBR
+  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                   XXXXXXX,  XXXXXXX, XXXXXXX, XXXXXXX, MACRO4, MACRO1,
+  XXXXXXX, DV_IQUE, DV_QUES, DV_IEXL, DV_EXLM, XXXXXXX,                   XXXXXXX,  KC_PGUP, XXXXXXX, KC_PSCR, MACRO5, MACRO2,
+  XXXXXXX, TAURUS,  UPARROW, XXXXXXX, XXXXXXX, XXXXXXX,                   KC_HOME,  KC_PGDN, KC_END, XXXXXXX, XXXXXXX,MACRO3,
+  XXXXXXX,LEFTARROW,DOWNARROW,RIGTHARROW,XXXXXXX, XXXXXXX,XXXXXXX ,  XXXXXXX, KC_PLUS, KC_MINS,KC_EQL, KC_LBRC, KC_RBRC, XXXXXXX,
+                      DV_LCBR, _______, _______, _______,  KC_INS, _______,  _______, _______, _______,DV_RCBR
 ),
 /* ADJUST
  * ,-----------------------------------------.                    ,-----------------------------------------.
