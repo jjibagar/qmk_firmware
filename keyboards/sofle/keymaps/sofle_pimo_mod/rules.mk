@@ -18,3 +18,16 @@ RGB_MATRIX_ENABLE = yes
 RGB_MATRIX_DRIVER = WS2812  
 
 SRC += features/pimoroni.c
+
+
+
+# vamos a por ol unicode
+UNICODE_ENABLE = yes
+
+TAP_DANCE_ENABLE = yes
+SLEEP_LED_ENABLE = yes
+
+
+NKRO_ENABLE  = yes #registrar pulsaciones multiples
+# activo los combos para lo de i+d
+ COMBO_ENABLE = yes

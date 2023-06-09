@@ -44,3 +44,11 @@ for more options.
 
 #endif
 
+#define UNICODE_SELECTED_MODES UNICODE_MODE_LINUX
+#define UNICODE_KEY_LNX LCTL(LSFT(KC_F))
+
+// tienes que personalizar le tapping, bajarlo a 180 los que sean el menique
+#define TAPPING_FORCE_HOLD
+//#define TAPPING_TERM 200 esto esta metido en le rev1
+
+

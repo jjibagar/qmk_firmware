@@ -4,7 +4,41 @@
 #include "features/enums.h"
 
 #include "features/encoders.h"
+#include "keymap_spanish_dvorak.h"
+#include "sendstring_spanish_dvorak.h"
 
+enum combos {
+  CB_ALTGR_ONE_SHOT,
+  CB_DVK_TIL_A,
+  CB_DVK_TIL_O,
+  CB_DVK_TIL_E,
+  CB_DVK_TIL_U,
+  CB_DVK_TIL_I,
+  COMBO_LENGTH
+};
+
+
+uint16_t COMBO_LEN = COMBO_LENGTH;
+
+// Combo funcionts
+const uint16_t PROGMEM altg_oneshot[] = {DV_I, DV_D, COMBO_END};
+const uint16_t PROGMEM dvk_a_til_combo[] = {DV_A, RSFT_T(DV_R), COMBO_END};
+const uint16_t PROGMEM dvk_o_til_combo[] = {LALT_T(DV_O), RSFT_T(DV_R), COMBO_END};
+const uint16_t PROGMEM dvk_e_til_combo[] = {LCTL_T(DV_E), RSFT_T(DV_R), COMBO_END};
+const uint16_t PROGMEM dvk_u_til_combo[] = {LSFT_T(DV_U), RSFT_T(DV_R), COMBO_END};
+const uint16_t PROGMEM dvk_i_til_combo[] = {DV_I, RSFT_T(DV_R), COMBO_END};
+
+
+combo_t key_combos[] = {
+
+  [CB_ALTGR_ONE_SHOT] = COMBO(altg_oneshot, ALTGR_ONE_SHOT ),
+  [CB_DVK_TIL_A] = COMBO(dvk_a_til_combo, TIL_A ),
+  [CB_DVK_TIL_O] = COMBO(dvk_o_til_combo, TIL_O ),
+  [CB_DVK_TIL_E] = COMBO(dvk_e_til_combo, TIL_E ),
+  [CB_DVK_TIL_U] = COMBO(dvk_u_til_combo, TIL_U),
+  [CB_DVK_TIL_I] = COMBO(dvk_i_til_combo, TIL_I ),
+
+};
 
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -23,13 +57,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *            |      |      |      |      |/       /         \      \ |      |      |      |      |
  *            `----------------------------------'           '------''---------------------------'
  */
-
 [_QWERTY] = LAYOUT(
-  KC_GRV,   KC_1,   KC_2,    KC_3,    KC_4,    KC_5,                     KC_6,    KC_7,    KC_8,    KC_9,    KC_0,  KC_GRV,
-  KC_ESC,   KC_Q,   KC_W,    KC_E,    KC_R,    KC_T,                     KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,  KC_BSPC,
-  KC_TAB,   KC_A,   KC_S,    KC_D,    KC_F,    KC_G,                     KC_H,    KC_J,    KC_K,    KC_L, KC_SCLN,  KC_QUOT,
-  KC_LSFT,  KC_Z,   KC_X,    KC_C,    KC_V,    KC_B, KC_MUTE,     XXXXXXX,KC_N,    KC_M, KC_COMM,  KC_DOT, KC_SLSH,  KC_RSFT,
-                 KC_LGUI,KC_LALT,KC_LCTL, MO(_LOWER), KC_ENT,      KC_SPC,  MO(_RAISE), KC_RCTL, KC_RALT, KC_RGUI
+KC_ESC,      KC_1,    KC_2,   KC_3, KC_4,    KC_5,                           KC_6, KC_7, KC_8,     KC_9,      KC_0,    KC_GRV,
+LALT_T(KC_TAB), TD(TD_PTO), TD(TD_PC),KC_E, KC_R,TD(TD_PASTE),               KC_Y, KC_U, DV_C,     DV_H,      DV_L,    KC_MINS,
+KC_LCTL,LGUI_T(DV_A),LALT_T(DV_O),LCTL_T(DV_E),LSFT_T(DV_U), DV_I,    DV_D,RSFT_T(DV_R),RCTL_T(DV_T),LALT_T(DV_N),RGUI_T(DV_S), KC_QUOT,
+LSFT_T(KC_CAPS),TD(TD_GUION),TD(TD_COPY),DV_J,DV_K,  DV_X,KC_MUTE,   XXXXXXX,DV_B,KC_M,KC_COMM,KC_DOT,KC_SLSH,RSFT_T(KC_CAPS),
+                     KC_LGUI,KC_LALT, KC_LGUI, MO(_LOWER), KC_SPC,     KC_ENT,KC_BSPC,MO(_RAISE), KC_RALT,KC_RGUI
 ),
 /*
  * COLEMAK
@@ -69,11 +102,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *            `----------------------------------'           '------''---------------------------'
  */
 [_LOWER] = LAYOUT(
-  _______,   KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,                       KC_F6,   KC_F7,   KC_F8,   KC_F9,  KC_F10,  KC_F11,
-  KC_GRV,    KC_1,    KC_2,    KC_3,    KC_4,    KC_5,                       KC_6,    KC_7,    KC_8,    KC_9,    KC_0,  KC_F12,
-  _______, KC_EXLM,   KC_AT, KC_HASH,  KC_DLR, KC_PERC,                       KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN, KC_PIPE,
-  _______,  KC_EQL, KC_MINS, KC_PLUS, KC_LCBR, KC_RCBR, _______,       _______, KC_LBRC, KC_RBRC, KC_SCLN, KC_COLN, KC_BSLS, _______,
-                       _______, _______, _______, _______, _______,       _______, _______, _______, _______, _______
+     KC_F1,   KC_F2,      KC_F3,   KC_F4,   KC_F5,   KC_F6,                        _______, _______, _______,  KC_P7,    KC_P8,    KC_P9,
+     KC_F7,   KC_F8,     KC_F9,   KC_F10,  KC_F11,  KC_F12,                         _______,  KC_UP , _______,  KC_P4,    KC_P5,    KC_P6,
+  _______,  KC_F14,UC(FLECHA_AR), KC_F15,  KC_F16,  KC_F17,                      KC_LEFT, KC_DOWN, KC_RGHT,  KC_P1,    KC_P2,    KC_P3,
+     _______,UC(FLECHA_I),UC(FLECHA_AB), UC(FLECHA_D), UC(L'ツ'), _______, _______,_______, DV_PLUS, DV_MINS,DV_ASTR,DV_SLSH, KC_P0,DV_EQL,
+                           DV_LBRC, _______, _______, _______, _______,   _______,  _______, KC_DEL, _______,DV_RBRC
 ),
 /* RAISE
  * ,----------------------------------------.                    ,-----------------------------------------.
@@ -90,20 +123,20 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *            `----------------------------------'           '------''---------------------------'
  */
 [_RAISE] = LAYOUT(
-  _______, _______ , _______ , _______ , _______ , _______,                           _______,  _______  , _______,  _______ ,  _______ ,_______,
-  _______,  KC_INS,  KC_PSCR,   KC_APP,  XXXXXXX, XXXXXXX,                        KC_PGUP, KC_PRVWD,   KC_UP, KC_NXTWD,KC_DLINE, KC_BSPC,
-  _______, KC_LALT,  KC_LCTL,  KC_LSFT,  XXXXXXX, KC_CAPS,                       KC_PGDN,  KC_LEFT, KC_DOWN, KC_RGHT,  KC_DEL, KC_BSPC,
-  _______, KC_UNDO,  KC_CUT,   KC_COPY, KC_PASTE, XXXXXXX,  _______,       _______,  XXXXXXX, KC_LSTRT, XXXXXXX, KC_LEND,   XXXXXXX, _______,
-                    _______, _______, _______, _______, _______,       _______, _______, _______, _______, _______
+  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                  XXXXXXX,  XXXXXXX, XXXXXXX, XXXXXXX, MACRO4, MACRO1,
+  XXXXXXX, DV_IQUE, DV_QUES, DV_IEXL, DV_EXLM, XXXXXXX,                  XXXXXXX,  KC_PGUP, XXXXXXX, KC_PSCR, MACRO5, MACRO2,
+  XXXXXXX, TAURUS,  UPARROW, XXXXXXX, XXXXXXX, XXXXXXX,                  KC_HOME,  KC_PGDN, KC_END, XXXXXXX, XXXXXXX,MACRO3,
+  XXXXXXX,LEFTARROW,DOWNARROW,RIGTHARROW,XXXXXXX, XXXXXXX,XXXXXXX ,   XXXXXXX, KC_PLUS, KC_MINS,KC_EQL, KC_LBRC, KC_RBRC, XXXXXXX,
+  DV_LCBR, _______, _______, _______,  KC_INS, _______,  _______, _______, _______,DV_RCBR
 ),
 /* ADJUST
  * ,-----------------------------------------.                    ,-----------------------------------------.
  * |      |      |      |      |      |      |                    |      |      |      |      |      |      |
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
- * |QK_BOOT|    |QWERTY|COLEMAK|      |      |                    |      |      |      |      |      |      |
- * |------+------+------+------+------+------|                    |------+------+------+------+------+------|  
+ * |QK_BOOT|    |QWERTY|COLEMAK|      |      |                    |      |      |      |      |      |      | Quito esto
+ * |------+------+------+------+------+------|                    |------+------+------+------+------+------| KC_COLEMAK 
  * |      |      |MACWIN|      |      |      |-------.    ,-------|      | VOLDO| MUTE | VOLUP|      |      |
- * |------+------+------+------+------+------|  MUTE |    |       |------+------+------+------+------+------|
+ * |------+------+------+------+------+------|  MUTE |    |       |------+------+------+------+------+------|CG_TOGG
  * |      |      |      |      |      |      |-------|    |-------|      | PREV | PLAY | NEXT |      |      |
  * `-----------------------------------------/       /     \      \-----------------------------------------'
  *            | LGUI | LAlt | LCTR |LOWER | /Enter  /       \Space \  |RAISE | RCTR | RAlt | RGUI |
@@ -111,13 +144,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *            `----------------------------------'           '------''---------------------------'
  */
   [_ADJUST] = LAYOUT(
-  XXXXXXX , XXXXXXX, XXXXXXX , XXXXXXX , XXXXXXX, XXXXXXX,                     XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-  QK_BOOT , XXXXXXX,KC_QWERTY, KC_COLEMAK,CG_TOGG,XXXXXXX,                     XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-  XXXXXXX , XXXXXXX,CG_TOGG, XXXXXXX,   RGB_TOG,  XXXXXXX,                     XXXXXXX, KC_VOLD, KC_MUTE, KC_VOLU, XXXXXXX, XXXXXXX,
-  XXXXXXX , XXXXXXX, XXXXXXX, XXXXXXX,  XXXXXXX,  XXXXXXX,XXXXXXX,     XXXXXXX, XXXXXXX, KC_MPRV, KC_MPLY, KC_MNXT, XXXXXXX, XXXXXXX,
-                     _______, _______, _______, _______, _______,     _______, _______, _______, _______, _______
-  ),
-
+  KC_PWR, RGB_HUI, RGB_SAI, RGB_VAI, RGB_SPI, RGB_MOD,                   KC_MPRV, KC_MSTP, KC_MPLY, KC_MNXT, KC_MSEL, KC_MUTE,
+  QK_BOOT, RGB_HUD, RGB_SAD, RGB_VAD, RGB_SPD, RGB_TOG,                   XXXXXXX,XXXXXXX,XXXXXXX ,XXXXXXX , XXXXXXX, XXXXXXX,
+  XXXXXXX,  XXXXXXX, XXXXXXX, XXXXXXX,XXXXXXX,XXXXXXX,                   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_KB_VOLUME_UP,
+  TAURUS, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX  , XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_KB_VOLUME_DOWN,
+                    _______, _______, _______, _______, _______, _______,  _______, _______, _______,_______
+   ),
    [_MOUSE] = LAYOUT(
   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                       XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                       XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
@@ -126,6 +158,18 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                     XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,     XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
   )
 };
+
+
+// Tap Dance definitions
+tap_dance_action_t tap_dance_actions[] = {
+    // Tap once for , twice for ; y lo mismo para el . y los : 
+  [TD_PC] = ACTION_TAP_DANCE_DOUBLE(DV_COMM, LSFT(DV_COMM)),
+  [TD_PTO] = ACTION_TAP_DANCE_DOUBLE(DV_DOT, LSFT(DV_DOT)),
+  [TD_GUION]= ACTION_TAP_DANCE_DOUBLE(DV_MINS, LSFT(DV_MINS)),  // se pulsa uuna vez es un guion. si se pulsa 2 veces guion+shft
+  [TD_COPY]= ACTION_TAP_DANCE_DOUBLE(DV_Q, KC_COPY), //
+  [TD_PASTE]= ACTION_TAP_DANCE_DOUBLE(DV_Y, KC_PASTE)
+};
+
 
 #ifdef OLED_ENABLE
 
@@ -348,6 +392,10 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                 pointing_device_set_cpi(15000);
             }
             return false;
+	     case TAURUS:
+    if (record->event.pressed) {
+      SEND_STRING("\\Taurus");
+    } else {}
     }
     return true;
 }
