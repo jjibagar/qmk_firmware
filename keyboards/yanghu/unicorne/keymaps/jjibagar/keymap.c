@@ -13,13 +13,13 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.Cambio la T->A
  */
 
-//#include QMK_KEYBOARD_H
+#include QMK_KEYBOARD_H
 // en layers.h estan los nombres de capa _qwerty se llama _base
 //#include "layers.h"
 //#include "keymap_spanish_dvorak.h"
 //#include "sendstring_spanish_dvorak.h"
 #include "combos.c"
-//#include "jjibagar.h"
+#include "jjibagar.h"
 
 
 /* / Tap Dance keycodes
