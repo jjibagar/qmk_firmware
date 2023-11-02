@@ -1,3 +1,5 @@
+#pragma once
+#include"jjibagar.h"
 
 
 
@@ -7,4 +9,5 @@ enum layer_names {
     _LOWER,
     _RAISE,
     _ADJUST,
+    _EMACS
 };

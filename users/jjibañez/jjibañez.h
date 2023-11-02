@@ -74,9 +74,17 @@ enum td_keycodes {
 };
 */
 
-#define LOWER MO(_LOWER)
-#define RAISE MO(_RAISE)
-#define ADJUST MO(_ADJUST)
+/******************************/
+/* #define LOWER MO(_LOWER)   */
+/* #define RAISE MO(_RAISE)   */
+/* #define ADJUST MO(_ADJUST) */
+/* #define LOWER MO(_LOWER)   */
+/* #define RAISE MO(_RAISE)   */
+/* #define ADJUST MO(_ADJUST) */
+/* #define EMACS MO(_EMACS)   */
+/* #define JUEGOS MO(_JUEGOS) */
+/* #define NUM MO(_NUM)	      */
+/******************************/
 
 
 // Define a type containing as many tapdance states as you need¿?¿?¿?
@@ -146,5 +154,7 @@ typedef enum {
 #define _____ADJUST_D2_____ XXXXXXX,   XXXXXXX,  XXXXXXX,  XXXXXXX,  MACRO5,  MACRO2,	
 #define _____ADJUST_D3_____ QK_BOOT,    XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  MACRO3,
 #define _____ADJUST_D4_____ _______,   _______,   _______,  _______			
+
+   // poné el sonido y ver que mas se puede tocar
 
 #endif

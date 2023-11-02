@@ -1,4 +1,11 @@
-SRC += jjibagar.c
+
+# todos los .c se declaran solo aquí, menos los combos que se hace como esta abajo
+SRC += jjibagar.c \
+	tap_dances.c \
+	process_records.c 
+
+INTROSPECTION_KEYMAP_C = combos.c
+
 
 #A partir de aqui es cosecha propia
 
@@ -30,7 +37,7 @@ ifdef AUDIO_ENABLE
 	SRC += muse.c
 endif
 
-# esto es de la guia, no se si es necesario, es para cancelar macros creo
+# esto es de la guia, no se si es necesario, es para cancelar mascros creo
 # ifeq ($(strip $(MACROS_ENABLED)), yes)
 #    OPT_DEFS += -DMACROS_ENABLED
 # endif

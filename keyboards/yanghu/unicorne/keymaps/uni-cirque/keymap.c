@@ -19,6 +19,7 @@
 #include "keymap_spanish_dvorak.h"
 #include "sendstring_spanish_dvorak.h"
 
+
 #define LOWER MO(_LOWER)
 #define RAISE MO(_RAISE)
 #define ADJUST MO(_ADJUST)
