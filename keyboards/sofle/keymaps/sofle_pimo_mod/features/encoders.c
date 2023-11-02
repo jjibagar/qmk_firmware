@@ -51,42 +51,42 @@ bool encoder_update_user(uint8_t index, bool clockwise) {
 	} else if (index == 1) {
 	    if (clockwise) {
 		tap_code(KC_PGDN);
-               } else {
-                 tap_code(KC_PGUP);
-               }
-             }
-        return true;
-        case _ADJUST:
-            if (index == 0) {
-                if (clockwise) {
-                    tap_code(KC_VOLU);
-                } else {
-                tap_code(KC_VOLD);
-              }
-           } else if (index == 1) {
-                if (clockwise) {
-                   tap_code(KC_PGDN);
-               } else {
-                 tap_code(KC_PGUP);
-                }
-            }
-        return true;
-        default:
-            if (index == 0) {
-                if (clockwise) {
-                    tap_code(KC_VOLU);
-                } else {
-                tap_code(KC_VOLD);
-              }
-           } else if (index == 1) {
-                if (clockwise) {
-                   tap_code(KC_PGDN);
-               } else {
-                 tap_code(KC_PGUP);
-             }
-         }
-        return true;
-    }
+     } else {
+tap_code(KC_PGUP);
+ }
+ }
+ return true;
+ case _ADJUST:
+ if (index == 0) {
+ if (clockwise) {
+ tap_code(KC_VOLU);
+ } else {
+ tap_code(KC_VOLD);
+ }
+ } else if (index == 1) {
+ if (clockwise) {
+ tap_code(KC_PGDN);
+ } else {
+ tap_code(KC_PGUP);
+ }
+ }
+return true;
+default:
+ if (index == 0) {
+ if (clockwise) {
+ tap_code(KC_VOLU);
+ } else {
+ tap_code(KC_VOLD);
+ }
+} else if (index == 1) {
+ if (clockwise) {
+ tap_code(KC_PGDN);
+ } else {
+ tap_code(KC_PGUP);
+ }
+ }
+return true;
+}
 }
 
 #endif

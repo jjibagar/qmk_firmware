@@ -9,41 +9,44 @@
 
 
 
+// clang-format on
+layer_state_t layer_state_set_user(layer_state_t state) { return update_tri_layer_state(state, _LOWER, _RAISE, _ADJUST); }
 
-
-// Left encoder scrolls the mousewheel. Right encoder adjusts underglow hue.
-bool encoder_update_user(uint8_t index, bool clockwise) {
-    if (index == 0) {
-        if (clockwise) {
-#ifdef MOUSEKEY_ENABLE
-            tap_code(KC_MS_WH_DOWN);
-#else
-            tap_code(KC_PGDN);
-#endif
-        } else {
-#ifdef MOUSEKEY_ENABLE
-            tap_code(KC_MS_WH_UP);
-#else
-            tap_code(KC_PGUP);
-#endif
-        }
-    } else {  // index = 1: right encoder
-        if (clockwise) {
-#ifdef RGB_MATRIX_ENABLE
-            rgb_matrix_step();
-#else
-            rgblight_increase_hue_noeeprom();
-#endif
-        } else {
-#ifdef RGB_MATRIX_ENABLE
-            rgb_matrix_step_reverse();
-#else
-            rgblight_decrease_hue_noeeprom();
-#endif
-        }
-    }
-    return false;
-}
+/********************************************************************************/
+/* // Left encoder scrolls the mousewheel. Right encoder adjusts underglow hue. */
+/* bool encoder_update_user(uint8_t index, bool clockwise) {		        */
+/*     if (index == 0) {						        */
+/*         if (clockwise) {						        */
+/* #ifdef MOUSEKEY_ENABLE						        */
+/*             tap_code(KC_MS_WH_DOWN);					        */
+/* #else								        */
+/*             tap_code(KC_PGDN);					        */
+/* #endif								        */
+/*         } else {							        */
+/* #ifdef MOUSEKEY_ENABLE						        */
+/*             tap_code(KC_MS_WH_UP);					        */
+/* #else								        */
+/*             tap_code(KC_PGUP);					        */
+/* #endif								        */
+/*         }								        */
+/*     } else {  // index = 1: right encoder				        */
+/*         if (clockwise) {						        */
+/* #ifdef RGB_MATRIX_ENABLE						        */
+/*             rgb_matrix_step();					        */
+/* #else								        */
+/*             rgblight_increase_hue_noeeprom();			        */
+/* #endif								        */
+/*         } else {							        */
+/* #ifdef RGB_MATRIX_ENABLE						        */
+/*             rgb_matrix_step_reverse();				        */
+/* #else								        */
+/*             rgblight_decrease_hue_noeeprom();			        */
+/* #endif								        */
+/*         }								        */
+/*     }								        */
+/*     return false;							        */
+/* }									        */
+/********************************************************************************/
 
 // Set underglow color to blue.
 void keyboard_post_init_user(void) { rgblight_sethsv_noeeprom(RGBLIGHT_DEFAULT_COLOR); }

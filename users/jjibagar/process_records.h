@@ -22,6 +22,7 @@ enum custom_keycodes {
   TIL_E,
   TIL_U,
   TIL_I,
+  // codigos emacs
   SAVE,
   SAVE_AS,
   MAGIT,

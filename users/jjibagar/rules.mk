@@ -2,7 +2,8 @@
 # todos los .c se declaran solo aquí, menos los combos que se hace como esta abajo
 SRC += jjibagar.c \
 	tap_dances.c \
-	process_records.c 
+	process_records.c\
+	features/encoders.c
 
 INTROSPECTION_KEYMAP_C = combos.c
 
@@ -17,7 +18,7 @@ NKRO_ENABLE= yes
 TAP_DANCE_ENABLE = yes
 SLEEP_LED_ENABLE = yes
 
-
+ENCODER_ENABLE=yes
 #LTO_ENABLE = yes
 # significantly reduce the compiled size,but disable the legacy TMK Macros and Functions features
 # de momento lo dejo encendido porque no creo que me falte memoria

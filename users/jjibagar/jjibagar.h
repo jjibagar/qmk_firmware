@@ -6,6 +6,7 @@
 #include "layers.h"
 #include "process_records.h"
 #include "tap_dances.h"
+#include "features/encoders.h"
 
 //#include QMK_KEYBOARD_H
 
@@ -23,8 +24,8 @@
 
 #define em_Z LT(_EMACS,DV_Z)
 #define ju_ENT LT(_JUEGOS,DV_ENT)
-//#define NUBSemacs LT(_EMACS,KC_NUBS)
-//#define MINSemacs LT(_EMACS,KC_SLSH)
+//#define NUBSemacs LT(_EMACS,KC_NUBS)'''''''''''''
+//#define MINSemacs LT(_EMACS,KC_SLSH)ssl
 
 // extern keymap_config_t keymap_config;
 // defino capa base    
@@ -34,8 +35,8 @@
 #define _____BASE_I4_____ KC_LGUI, KC_LALT, LOWER,KC_SPC,
 #define _____BASE_D1_____ KC_Y, KC_U, KC_I,    KC_O,   KC_P,    KC_GRV,
 #define _____BASE_D2_____ DV_D,  RSFT_T(DV_R),RCTL_T(DV_T),RALT_T(DV_N),KC_SCLN,DV_ACUT,//KC_QUOT ,
-#define _____BASE_D3_____ DV_B, DV_M, DV_W, DV_W, em_Z, DV_QUOT, // KC_MINS, 
-#define _____BASE_D4_____ LT(_NUM,KC_ENT),KC_BSPC, RAISE, KC_RALT
+#define _____BASE_D3_____ DV_B, DV_M, DV_W, DV_V, em_Z, DV_QUOT, // KC_MINS, 
+#define _____BASE_D4_____ LT(_NUM,KC_ENT),KC_BSPC, RAISE, KC_MUTE //KC_RALT
 
 // tienes que sacar super y Mgr para poder poner los potenciometros mira a ver si puedes tener un archivo layers en users y separas mejor, esto no tendria que ir aqui
 // defino lower
