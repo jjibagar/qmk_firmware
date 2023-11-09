@@ -30,7 +30,12 @@ enum custom_keycodes {
   OPEN,
   BUFFER,
   KILL,
-  ORGPDF
+  ORGPDF,
+  V1,
+  V2,
+  V3,
+  V0,
+  ACE_W
 };
 
 

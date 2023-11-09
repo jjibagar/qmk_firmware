@@ -8,6 +8,9 @@ enum {
      ALT_LP, // Our example key: LALT when held, ( when tapped. Add additional keycodes for each tapdance.
     CTRL_LP,
     LSFT_LP,
+    CTRL_HR,
+    LSFT_HR,
+    ALT_HR,
     TD_PTO,
     TD_PC,
     TD_COMI,

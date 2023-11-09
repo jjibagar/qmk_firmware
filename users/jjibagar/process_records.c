@@ -19,6 +19,7 @@ switch (keycode) {
               set_oneshot_mods(MOD_BIT(KC_RALT));
        } 
        return false;
+       // atajas emacs
          case MAGIT:
     if (record->event.pressed) {
       // when keycode QMKBEST is pressed
@@ -57,10 +58,37 @@ switch (keycode) {
 	SEND_STRING(SS_LCTL("X") SS_TAP(X_Y));
     }
     return false;
+  case V1:
+    if (record->event.pressed) {
+	SEND_STRING(SS_LCTL("X") SS_TAP(X_1));
+    }
+    return false;
+    case V2:
+    if (record->event.pressed) {
+	SEND_STRING(SS_LCTL("X") SS_TAP(X_2));
+    }
+    return false;
+  case V3:
+    if (record->event.pressed) {
+	SEND_STRING(SS_LCTL("X") SS_TAP(X_3));
+    }
+    return false;
+  case V0:
+    if (record->event.pressed) {
+	SEND_STRING(SS_LCTL("X") SS_TAP(X_0));
+    }
+    return false;
+      case ACE_W:
+    if (record->event.pressed) {
+	SEND_STRING(SS_LCTL("X") SS_TAP(X_S));
+    }
+    return false;
+    //MACROS
+    return false;
          case MACRO1:
     if (record->event.pressed) {
       SEND_STRING("Jose Jorge Ibañez Garcia");
-        } else {         
+        } else {      
         }
         return false;
          case MACRO2:

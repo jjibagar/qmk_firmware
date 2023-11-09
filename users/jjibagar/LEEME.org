@@ -2,13 +2,14 @@
 #+LANGUAGE: ES
 #+description: cofiguracion de teclado unificada y centralizada en el que se recogen todas las posibilidades que puedo usar para que en cada keymap solo haya que introducir las referencias aqui recogidas
 
-* Por solucionar: [22%]
-- [ ] no se porque no consigo usar sendstring_dvorak.h, me dice que defino 2 veces
+* Por solucionar: [12%]
+- [X] no se porque no consigo usar sendstring_dvorak.h, me dice que defino 2 veces
   
-- [X] meter macros y config en jjibañez.c
-- [ ] meter capa de emacs
-  - [ ] poner C-x o para cambiar de ventana activa
-- [ ] meter capa de juegos, ¿que se active con tap y desactive con doble tap en adjust?
+- [ ] meter macros y config en jjibañez.c
+- [-] en capa emacs
+  - [X] meter capa de emacs
+  - [ ] poner C-x o para cambiar de ventana activa,ACE_W
+- [ ] meter capa eede juegos, ¿que se active con tap y desactive con doble tap en adjust?, no me aclaro pregunta
   - [ ] asignar teclas
   - [ ] poner tecla que bloquea capa y tecla para volver a _base (usar la de adjust?)
   - [ ] poner en la capa las teclas de capas lower, raise y vuelta de adjust a base

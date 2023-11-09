@@ -52,7 +52,7 @@ void ctrl_lp_finished(tap_dance_state_t *state, void *user_data) {
     td_state = cur_dance(state);
     switch (td_state) {
         case TD_SINGLE_TAP:
-            register_code16(DV_AMPR);
+            register_code16(DV_CIRC);
             break;
         case TD_SINGLE_HOLD:
             register_code16(KC_LCTL);
@@ -68,13 +68,109 @@ void ctrl_lp_finished(tap_dance_state_t *state, void *user_data) {
 void ctrl_lp_reset(tap_dance_state_t *state, void *user_data) {
     switch (td_state) {
         case TD_SINGLE_TAP:
-            unregister_code16(DV_AMPR);
+            unregister_code16(DV_CIRC);
             break;
         case TD_SINGLE_HOLD:
             unregister_code16(KC_LCTL);
             break;	           
         case TD_DOUBLE_SINGLE_TAP:         
             unregister_code16(DV_BULT);
+            break;
+    case TD_UNKNOWN:
+	break;
+	    }
+}
+void lsft_hr_finished(tap_dance_state_t *state, void *user_data) {
+    td_state = cur_dance(state);
+    switch (td_state) {
+        case TD_SINGLE_TAP:
+            register_code16(DV_LPRN);
+            break;
+        case TD_SINGLE_HOLD:
+            register_code16(KC_LSFT);
+            break;	           
+        case TD_DOUBLE_SINGLE_TAP:         
+            register_code16(DV_RPRN);
+            break;
+    case TD_UNKNOWN:
+	break;
+
+    }
+}
+void lsft_hr_reset(tap_dance_state_t *state, void *user_data) {
+    switch (td_state) {
+        case TD_SINGLE_TAP:
+            unregister_code16(DV_LPRN);
+            break;
+        case TD_SINGLE_HOLD:
+            unregister_code16(KC_LSFT);
+            break;	           
+        case TD_DOUBLE_SINGLE_TAP:         
+            unregister_code16(DV_RPRN);
+            break;
+    case TD_UNKNOWN:
+	break;
+	    }
+}
+void ctrl_hr_finished(tap_dance_state_t *state, void *user_data) {
+    td_state = cur_dance(state);
+    switch (td_state) {
+        case TD_SINGLE_TAP:
+            register_code16(DV_LBRC);
+            break;
+        case TD_SINGLE_HOLD:
+            register_code16(KC_LCTL);
+            break;	           
+        case TD_DOUBLE_SINGLE_TAP:         
+            register_code16(DV_RBRC);
+            break;
+    case TD_UNKNOWN:
+	break;
+
+    }
+}
+void ctrl_hr_reset(tap_dance_state_t *state, void *user_data) {
+    switch (td_state) {
+        case TD_SINGLE_TAP:
+            unregister_code16(DV_LBRC);
+            break;
+        case TD_SINGLE_HOLD:
+            unregister_code16(KC_LCTL);
+            break;	           
+        case TD_DOUBLE_SINGLE_TAP:         
+            unregister_code16(DV_RBRC);
+            break;
+    case TD_UNKNOWN:
+	break;
+	    }
+}
+void alt_hr_finished(tap_dance_state_t *state, void *user_data) {
+    td_state = cur_dance(state);
+    switch (td_state) {
+        case TD_SINGLE_TAP:
+            register_code16(DV_LABK);
+            break;
+        case TD_SINGLE_HOLD:
+            register_code16(KC_LALT);
+            break;	           
+        case TD_DOUBLE_SINGLE_TAP:         
+            register_code16(DV_RABK);
+            break;
+    case TD_UNKNOWN:
+	break;
+
+    }
+}
+void alt_hr_reset(tap_dance_state_t *state, void *user_data) {
+    switch (td_state) {
+        case TD_SINGLE_TAP:
+            unregister_code16(DV_LABK);
+            break;
+        case TD_SINGLE_HOLD:
+            unregister_code16(KC_LALT);
+            break;	           
+        case TD_DOUBLE_SINGLE_TAP:         
+            unregister_code16(DV_RABK);
             break;
     case TD_UNKNOWN:
 	break;
@@ -91,12 +187,19 @@ tap_dance_action_t tap_dance_actions[] = {
 //simbolos lower
   [TD_INTE]=ACTION_TAP_DANCE_DOUBLE(DV_QUES, DV_IQUE),
   [TD_EXCL]=ACTION_TAP_DANCE_DOUBLE(DV_EXLM,DV_IEXL),
-  [TD_CORCH]=ACTION_TAP_DANCE_DOUBLE(DV_LBRC,DV_RBRC),
-  [TD_LLAVE]=ACTION_TAP_DANCE_DOUBLE(DV_LCBR,DV_RCBR),
-  [TD_PAREN]=ACTION_TAP_DANCE_DOUBLE(DV_LPRN,DV_RPRN),
-  [TD_MAYOR]=ACTION_TAP_DANCE_DOUBLE(DV_LABK,DV_RABK),
-  [TD_BIRG]=ACTION_TAP_DANCE_DOUBLE(DV_PIPE,DV_CIRC),
+//  [TD_CORCH]=ACTION_TAP_DANCE_DOUBLE(DV_LBRC,DV_RBRC),
+[TD_LLAVE]=ACTION_TAP_DANCE_DOUBLE(DV_LCBR,DV_RCBR),
+// [TD_PAREN]=ACTION_TAP_DANCE_DOUBLE(DV_LPRN,DV_RPRN),
+//  [TD_MAYOR]=ACTION_TAP_DANCE_DOUBLE(DV_LABK,DV_RABK),
+  [TD_BIRG]=ACTION_TAP_DANCE_DOUBLE(DV_PIPE,DV_TILD),
   [TD_BARRA]=ACTION_TAP_DANCE_DOUBLE(DV_SLSH,DV_BSLS),
   [ALT_LP] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, alt_lp_finished, alt_lp_reset),
-  [CTRL_LP]=ACTION_TAP_DANCE_FN_ADVANCED(NULL, ctrl_lp_finished, ctrl_lp_reset)
+  [CTRL_LP]=ACTION_TAP_DANCE_FN_ADVANCED(NULL, ctrl_lp_finished, ctrl_lp_reset),
+  //Configuramos los hold de homerow en lower
+  [LSFT_HR]=ACTION_TAP_DANCE_FN_ADVANCED(NULL, lsft_hr_finished, lsft_hr_reset),
+  [CTRL_HR]=ACTION_TAP_DANCE_FN_ADVANCED(NULL, ctrl_hr_finished, ctrl_hr_reset),
+  [ALT_HR]=ACTION_TAP_DANCE_FN_ADVANCED(NULL, alt_hr_finished, alt_hr_reset)
 };
+
+
+
