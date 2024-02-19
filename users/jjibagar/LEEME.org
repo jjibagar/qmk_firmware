@@ -11,13 +11,15 @@
   - [ ] poner C-x o para cambiar de ventana activa,ACE_W
 - [ ] meter capa eede juegos, ¿que se active con tap y desactive con doble tap en adjust?, no me aclaro pregunta
   - [ ] asignar teclas
+
   - [ ] poner tecla que bloquea capa y tecla para volver a _base (usar la de adjust?)
   - [ ] poner en la capa las teclas de capas lower, raise y vuelta de adjust a base
 - [ ] cambiar a capa propia el numpad, esta capa tambien lleva la numeracion normal
 - [ ] una vez definida la capa _NUM, poner las F arriba, y pon mas F
 - [ ] arreglar capa de signos
 - [ ] desplazar cruceta
-
+* guia unicorne
+                      [[file:Por_solucionar:_\[12%\]/2024-02-04_13-57-42_Montaje unicorne.org]]
 * Analisis de ninjonas [50%]
 - [X] en glabal:
   - tiene las llamadas a los .c solo en el rules del global

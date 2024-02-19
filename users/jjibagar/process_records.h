@@ -27,6 +27,7 @@ enum custom_keycodes {
   SAVE_AS,
   MAGIT,
   RECENT,
+  TAB,
   OPEN,
   BUFFER,
   KILL,
@@ -35,9 +36,10 @@ enum custom_keycodes {
   V2,
   V3,
   V0,
-  ACE_W
+  ACE_W,
+  //codigos datos personles
+  inicio
 };
-
 
 
 /* / Tap Dance keycodes

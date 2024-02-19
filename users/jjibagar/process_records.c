@@ -1,5 +1,10 @@
 #include "jjibagar.h"
+#include "/home/levo/Dropbox/Documentos/QMK_nombres/datos.h"
 
+bool is_alt_tab_active=false;
+ 
+
+uint16_t alt_tab_timer=0;
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   if (record->event.pressed) {
@@ -50,7 +55,9 @@ switch (keycode) {
     return false;
   case BUFFER:
     if (record->event.pressed) {
-      SEND_STRING(SS_LCTL("x") SS_TAP(X_N));
+	SEND_STRING(SS_LCTL("x") SS_TAP(X_N));
+      // SEND_STRING("å"); // debe ser algo asi, no es lo mismo C-x b cambia buffer normal y å lo tengo puesto para counsel con previsualizacion
+//SEND_STRING("å");
     }
     return false;
   case RECENT:
@@ -58,6 +65,37 @@ switch (keycode) {
 	SEND_STRING(SS_LCTL("X") SS_TAP(X_Y));
     }
     return false;
+   /* case TAB:  */
+   /*     if (record->event.pressed) { */
+   /* 	   register_code(KC_LALT); */
+   /* 	   register_code(KC_TAB); */
+   /*     } else { */
+   /* 	   unregister_code(KC_TAB); */
+   /* 	   unregister_code(KC_LALT); */
+   /*     } */
+   /*     return false; */
+
+case TAB:
+          if (record->event.pressed) {
+            if (!is_alt_tab_active) {
+                is_alt_tab_active = true;
+                register_code(KC_LALT);
+                }
+                alt_tab_timer = timer_read();
+		register_code(KC_TAB);
+            } else {
+                unregister_code(KC_TAB);
+            }
+            return false;
+/* // continuacion de la funcion tab */
+/* if (is_alt_tab_active) { */
+/*     if (timer_elapsed(alt_tab_timer) > 200) { */
+/*       unregister_code(KC_LALT); */
+/*       is_alt_tab_active = false; */
+/*     } */
+/*   } */
+
+// las V son para dividir ventanas en emacs
   case V1:
     if (record->event.pressed) {
 	SEND_STRING(SS_LCTL("X") SS_TAP(X_1));
@@ -87,7 +125,7 @@ switch (keycode) {
     return false;
          case MACRO1:
     if (record->event.pressed) {
-      SEND_STRING("Jose Jorge Ibañez Garcia");
+      SEND_STRING(nombre);
         } else {      
         }
         return false;
@@ -100,7 +138,7 @@ switch (keycode) {
         return false;
 	 case MACRO3:
     if (record->event.pressed) {     
-      SEND_STRING("<4163aX>\n");
+      SEND_STRING(clave);
         } else {
             
         }
@@ -190,3 +228,17 @@ switch (keycode) {
   }
   return true;
 }
+
+void matrix_scan_user(void) { // The very important timer.
+
+  /* layer_lock_task(); */
+  /* caps_word_task(); */
+
+  if (is_alt_tab_active) {
+    if (timer_elapsed(alt_tab_timer) > 1000) {
+      unregister_code(KC_LALT);
+      is_alt_tab_active = false;
+    }
+  }
+
+};

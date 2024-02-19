@@ -31,9 +31,9 @@
 // defino capa base    
 #define _____BASE_I1_____ LALT_T(KC_ESC), TD(TD_PTO) ,TD(TD_PC),KC_E,KC_R,TD(TD_PASTE), 
 #define _____BASE_I2_____ LCTL_T(KC_TAB), DV_A, LALT_T(DV_O),LCTL_T(DV_E),LSFT_T(DV_U), DV_I,
-#define _____BASE_I3_____ LSFT_T(KC_CAPS),TD(TD_GUION),TD(TD_COPY),KC_C, DV_K,DV_X,
+#define _____BASE_I3_____ LSFT_T(KC_CAPS),TD(TD_GUION),TD(TD_COPY),DV_J, DV_K,DV_X,
 #define _____BASE_I4_____ KC_LGUI, KC_LALT, LOWER,KC_SPC,
-#define _____BASE_D1_____ KC_Y, KC_U, KC_I,    KC_O,   KC_P,    KC_GRV,
+#define _____BASE_D1_____ DV_F, DV_G, DV_C,   DV_H,   DV_L,    KC_GRV,
 #define _____BASE_D2_____ DV_D,  RSFT_T(DV_R),RCTL_T(DV_T),RALT_T(DV_N),em_S,DV_ACUT,//KC_QUOT ,
 #define _____BASE_D3_____ DV_B, DV_M, DV_W, DV_V, DV_Z, DV_QUOT, // KC_MINS, 
 #define _____BASE_D4_____ LT(_NUM,KC_ENT),KC_BSPC, RAISE, KC_MUTE //KC_RALT
@@ -85,13 +85,13 @@
 #define _____ADJUST_D4_____ _______,   _______,   _______,  _______		  
 
    //capa emacs
-#define _____EMACS_I1_____ XXXXXXX, V1, V2, V3, ORGPDF , XXXXXXX,
-#define _____EMACS_I2_____ XXXXXXX, XXXXXXX, OPEN,    XXXXXXX, XXXXXXX ,V0,
+#define _____EMACS_I1_____ XXXXXXX, V1,	   V2,   V3, ORGPDF , XXXXXXX,
+#define _____EMACS_I2_____ TAB, XXXXXXX, OPEN, ACE_W, BUFFER,V0,
 #define _____EMACS_I3_____ XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KILL, XXXXXXX ,
-#define _____EMACS_I4_____           XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-#define _____EMACS_D1_____  RECENT, SAVE, XXXXXXX, XXXXXXX, XXXXXXX , XXXXXXX,
-#define _____EMACS_D2_____  XXXXXXX, XXXXXXX, XXXXXXX   , XXXXXXX, XXXXXXX, XXXXXXX,
-#define _____EMACS_D3_____  BUFFER, MAGIT, ACE_W, XXXXXXX, XXXXXXX, XXXXXXX,
+#define _____EMACS_I4_____  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+#define _____EMACS_D1_____  RECENT, SAVE, XXXXXXX, XXXXXXX, XXXXXXX , UNICODE,
+#define _____EMACS_D2_____  XXXXXXX, XXXXXXX, XXXXXXX   , XXXXXXX, XXXXXXX, TAURUS,
+#define _____EMACS_D3_____  XXXXXXX, MAGIT, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
 #define _____EMACS_D4_____  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
 
 #define _____JUEGOS_I1_____ LALT_T(KC_ESC), TD(TD_PTO) ,TD(TD_PC),KC_E,KC_R,TD(TD_PASTE),
