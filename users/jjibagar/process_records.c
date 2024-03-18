@@ -19,13 +19,13 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     // set_timelog();
   }
 switch (keycode) {
-        case ALTGR_ONE_SHOT:
+case ALTGR_ONE_SHOT:
           if (record->event.pressed) {
               set_oneshot_mods(MOD_BIT(KC_RALT));
        } 
        return false;
        // atajas emacs
-         case MAGIT:
+case MAGIT:
     if (record->event.pressed) {
       // when keycode QMKBEST is pressed
       SEND_STRING(SS_LCTL("x") SS_TAP(X_M));
@@ -33,22 +33,45 @@ switch (keycode) {
       // when keycode QMKBEST is released
     }
     return false;
-      case KILL:
+case AVY_LINE:
+    if (record->event.pressed) {
+      // when keycode QMKBEST is pressed 
+	    SEND_STRING(SS_LCTL("c") SS_TAP(X_V));
+    } else {
+      // when keycode QMKBEST is released
+    }
+    return false;
+case COMPLETADO:
+    if (record->event.pressed) {
+      // when keycode QMKBEST is pressed 
+	    SEND_STRING(SS_LCTL("C") SS_TAP(X_D) SS_TAP(X_Y));
+    } else {
+      // when keycode QMKBEST is released
+    }
+    return false;
+
+    // prueba de hacer el salto de linea
+case SALTO:
+    if (record->event.pressed) {
+      SEND_STRING(SS_LCTL("em"));
+    }
+    return false;
+case KILL:
     if (record->event.pressed) {
       SEND_STRING(SS_LCTL("x") SS_TAP(X_V));
     }
     return false;
-  case ORGPDF:
+case ORGPDF:
     if (record->event.pressed) {
       SEND_STRING(SS_LCTL("ce") SS_TAP(X_P) SS_TAP(X_R));
     }
     return false;
-  case OPEN:
+case OPEN:
     if (record->event.pressed) {
       SEND_STRING(SS_LCTL("xf"));
     }
     return false;
-  case SAVE:
+case SAVE:
     if (record->event.pressed) {
       SEND_STRING(SS_LCTL("xs"));
     }
@@ -242,3 +265,4 @@ void matrix_scan_user(void) { // The very important timer.
   }
 
 };
+

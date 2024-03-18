@@ -34,8 +34,15 @@ Caracteristicas:
 - PMW3360DM-T2QU este chip parece moderno y lo lleva montado este teclado https://www.hackster.io/news/this-split-ergonomic-mechanical-keyboard-features-a-trackball-mouse-f4a54fbf9976, tira de este hilo para el armazon del pmw3360dm.
   github del teclado https://siderakb.github.io/docs/ergosnm/rev2, la pcb del trakcball es la siderakb. la version 3 es la buena, no te fies de la foto, lleva el conector del trackpad https://github.com/siderakb/pmw3360-pcb/blob/v3.1.0/README.md , comparar las salidas de ambos conectores para asegurarse que es la misma. Este es de 8pines, comprueba que el adaptador tambien recibe 8
   
-  
-  
+
+* case madera
+- diseño
+  - muy chulo
+  - se queda en terreno de nadie
+- Reposa muñecas tal como esta solo le falta 2cm, con el molde anterior sobra
+- balanceo, no me preocupa con las almoadillas en la parte de abajo es suficiente, no se empuja en esos lados abajo
+- inclinacion incluida ,lo habia pensado, es lo suyo
+- separadores, son lo suyo
 * emacs
 mirar que es company-mode exactamente que roge se lo instale mejor que auto complete. Y tu pontelo obligatorio, quita auto-complete-mode. 
 uoeuoeu

@@ -26,6 +26,9 @@ enum custom_keycodes {
   SAVE,
   SAVE_AS,
   MAGIT,
+  SALTO,
+  COMPLETADO,
+  AVY_LINE,
   RECENT,
   TAB,
   OPEN,
@@ -36,6 +39,7 @@ enum custom_keycodes {
   V2,
   V3,
   V0,
+  
   ACE_W,
   //codigos datos personles
   inicio
