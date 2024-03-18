@@ -85,14 +85,14 @@
 #define _____ADJUST_D4_____ _______,   _______,   _______,  _______		  
 
    //capa emacs
-#define _____EMACS_I1_____ XXXXXXX, V1,	   V2,   V3, ORGPDF , XXXXXXX,
+#define _____EMACS_I1_____ XXXXXXX, V1,	   V2,   V3, ORGPDF , AVY_LINE,
 #define _____EMACS_I2_____ TAB, XXXXXXX, OPEN, ACE_W, BUFFER,V0,
 #define _____EMACS_I3_____ XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KILL, XXXXXXX ,
 #define _____EMACS_I4_____  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-#define _____EMACS_D1_____  RECENT, SAVE, XXXXXXX, XXXXXXX, XXXXXXX , UNICODE,
+#define _____EMACS_D1_____  RECENT, SAVE, COMPLETADO, XXXXXXX, XXXXXXX , UNICODE,
 #define _____EMACS_D2_____  XXXXXXX, XXXXXXX, XXXXXXX   , XXXXXXX, XXXXXXX, TAURUS,
 #define _____EMACS_D3_____  XXXXXXX, MAGIT, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-#define _____EMACS_D4_____  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
+#define _____EMACS_D4_____  SALTO, XXXXXXX, XXXXXXX, XXXXXXX
 
 #define _____JUEGOS_I1_____ LALT_T(KC_ESC), TD(TD_PTO) ,TD(TD_PC),KC_E,KC_R,TD(TD_PASTE),
 #define _____JUEGOS_I2_____ LCTL_T(KC_TAB), DV_A, DV_O, DV_E, DV_U , DV_I,      
