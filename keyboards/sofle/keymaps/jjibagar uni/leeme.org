@@ -1,0 +1,14 @@
+#+title: uni-ii
+
+* Resumen
+Esta configuracion esta hecha para la versión 0.20 de QMK usando el comando --versión me aparece la 1.1.
+
+
+* comandos
+1) Compilacion y flasheo
+2) qmk compile -kb yanghu/unicorne/f411 -km uni-ii
+3) dfu-util -a 0 -d feed:0204 -s 0x8000000:leave -D yanghu_unicorne_f411_anton.bin
+4) Exportar el mapeado
+5) qmk c2json -kb yanghu/unicorne -km levo-uni -q --no-cpp -o levo.json keymap.c
+6) Web para crear el svg
+7) https://caksoylar-keymap-drawer-streamlitapp-2a0rau.streamlit.app/

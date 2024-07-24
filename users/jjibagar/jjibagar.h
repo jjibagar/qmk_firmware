@@ -68,12 +68,10 @@
 #define _____NUM_I2_____  XXXXXXX,  KC_6,     KC_7,     KC_8,     KC_9,     KC_0,
 #define _____NUM_I3_____  DV_EQL, DV_PLUS, DV_ASTR, TD(TD_BARRA), DV_HASH,  DV_AT,
 #define _____NUM_I4_____		 _______,   _______,   _______,  _______,          		     
-#define _____NUM_D1_____ TG(_JUEGOS),KC_P7, KC_P8,  KC_P9,  XXXXXXX,  XXXXXXX, 
-#define _____NUM_D2_____   KC_P0,  KC_P4, KC_P5,  KC_P6,  XXXXXXX,  XXXXXXX,   
-#define _____NUM_D3_____ _______,  KC_P1, KC_P2,  KC_P3,  XXXXXXX,  XXXXXXX, 
-#define _____NUM_D4_____ KC_ENT,   _______,   _______,   _______	    	
-
-
+#define _____NUM_D1_____ TG(_JUEGOS),  KC_P7,  KC_P8,  KC_P9,  XXXXXXX,  XXXXXXX, 
+#define _____NUM_D2_____     _______,  KC_P4,  KC_P5,  KC_P6,  XXXXXXX,  XXXXXXX,   
+#define _____NUM_D3_____       KC_P0,  KC_P1,  KC_P2,  KC_P3,  XXXXXXX,  XXXXXXX, 
+#define _____NUM_D4_____      KC_ENT,_______,_______,_______	       
    // poné el sonido y ver que mas se puede tocar
 #define _____ADJUST_I1_____ KC_PWR,   RGB_SAI, RGB_HUI,  RGB_MOD,  RGB_VAI,   RGB_TOG,  
 #define _____ADJUST_I2_____  XXXXXXX,   RGB_SAD, RGB_HUD,  RGB_RMOD, RGB_VAD,   XXXXXXX,
