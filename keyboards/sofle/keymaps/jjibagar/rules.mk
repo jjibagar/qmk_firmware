@@ -1,13 +1,17 @@
 MOUSEKEY_ENABLE = yes
 EXTRAKEY_ENABLE = yes
 CONSOLE_ENABLE = no
-RGBLIGHT_ENABLE = yes
-ENCODER_ENABLE = yes
+#el encoder por defecto es yes
+ENCODER_ENABLE = no
 LTO_ENABLE = yes
 OLED_ENABLE = yes
 OLED_DRIVER = SSD1306
 
-
 #Sparkfun Config
 CONVERT_TO=promicro_rp2040
 BOOTLOADER = rp2040
+
+
+#de cosecha propia
+RGB_MATRIX_ENABLE = no
+RGB_MATRIX_DRIVER = IS31FL3731
