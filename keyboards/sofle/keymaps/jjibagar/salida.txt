@@ -1,0 +1,114 @@
+levo@Despacho:~/qmk_firmware$ qmk compile -kb sofle/keyhive -km jjibagar
+Ψ Compiling keymap with gmake --jobs=1 sofle/keyhive:jjibagar
+
+
+WARNING: Some git submodules are out of date or modified.
+ Please consider running qmk git-submodule.
+
+Making sofle/keyhive with keymap jjibagar
+
+arm-none-eabi-gcc (15:10.3-2021.07-4) 10.3.1 20210621 (release)
+Copyright (C) 2020 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+Compiling: quantum/keymap_introspection.c                                                          In file included from ./keyboards/sofle/keymaps/jjibagar/keymap.c:3,
+                 from quantum/keymap_introspection.c:5:
+users/jjibagar/jjibagar.h:22:42: error: implicit declaration of function 'LAYOUT_split_3x6_4'; did you mean 'LAYOUT_split_3x6_4_wrapper'? [-Werror=implicit-function-declaration]
+   22 | #define LAYOUT_split_3x6_4_wrapper(...)  LAYOUT_split_3x6_4(__VA_ARGS__)
+      |                                          ^~~~~~~~~~~~~~~~~~
+./keyboards/sofle/keymaps/jjibagar/keymap.c:23:13: note: in expansion of macro 'LAYOUT_split_3x6_4_wrapper'
+   23 |   [_BASE] = LAYOUT_split_3x6_4_wrapper(
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~
+users/jjibagar/jjibagar.h:22:42: error: initializer element is not constant
+   22 | #define LAYOUT_split_3x6_4_wrapper(...)  LAYOUT_split_3x6_4(__VA_ARGS__)
+      |                                          ^~~~~~~~~~~~~~~~~~
+./keyboards/sofle/keymaps/jjibagar/keymap.c:23:13: note: in expansion of macro 'LAYOUT_split_3x6_4_wrapper'
+   23 |   [_BASE] = LAYOUT_split_3x6_4_wrapper(
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~
+users/jjibagar/jjibagar.h:22:42: note: (near initialization for 'keymaps[0][0][0]')
+   22 | #define LAYOUT_split_3x6_4_wrapper(...)  LAYOUT_split_3x6_4(__VA_ARGS__)
+      |                                          ^~~~~~~~~~~~~~~~~~
+./keyboards/sofle/keymaps/jjibagar/keymap.c:23:13: note: in expansion of macro 'LAYOUT_split_3x6_4_wrapper'
+   23 |   [_BASE] = LAYOUT_split_3x6_4_wrapper(
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~
+users/jjibagar/jjibagar.h:22:42: error: initializer element is not constant
+   22 | #define LAYOUT_split_3x6_4_wrapper(...)  LAYOUT_split_3x6_4(__VA_ARGS__)
+      |                                          ^~~~~~~~~~~~~~~~~~
+./keyboards/sofle/keymaps/jjibagar/keymap.c:36:14: note: in expansion of macro 'LAYOUT_split_3x6_4_wrapper'
+   36 |   [_LOWER] = LAYOUT_split_3x6_4_wrapper(
+      |              ^~~~~~~~~~~~~~~~~~~~~~~~~~
+users/jjibagar/jjibagar.h:22:42: note: (near initialization for 'keymaps[1][0][0]')
+   22 | #define LAYOUT_split_3x6_4_wrapper(...)  LAYOUT_split_3x6_4(__VA_ARGS__)
+      |                                          ^~~~~~~~~~~~~~~~~~
+./keyboards/sofle/keymaps/jjibagar/keymap.c:36:14: note: in expansion of macro 'LAYOUT_split_3x6_4_wrapper'
+   36 |   [_LOWER] = LAYOUT_split_3x6_4_wrapper(
+      |              ^~~~~~~~~~~~~~~~~~~~~~~~~~
+users/jjibagar/jjibagar.h:22:42: error: initializer element is not constant
+   22 | #define LAYOUT_split_3x6_4_wrapper(...)  LAYOUT_split_3x6_4(__VA_ARGS__)
+      |                                          ^~~~~~~~~~~~~~~~~~
+./keyboards/sofle/keymaps/jjibagar/keymap.c:44:14: note: in expansion of macro 'LAYOUT_split_3x6_4_wrapper'
+   44 |   [_RAISE] = LAYOUT_split_3x6_4_wrapper(
+      |              ^~~~~~~~~~~~~~~~~~~~~~~~~~
+users/jjibagar/jjibagar.h:22:42: note: (near initialization for 'keymaps[2][0][0]')
+   22 | #define LAYOUT_split_3x6_4_wrapper(...)  LAYOUT_split_3x6_4(__VA_ARGS__)
+      |                                          ^~~~~~~~~~~~~~~~~~
+./keyboards/sofle/keymaps/jjibagar/keymap.c:44:14: note: in expansion of macro 'LAYOUT_split_3x6_4_wrapper'
+   44 |   [_RAISE] = LAYOUT_split_3x6_4_wrapper(
+      |              ^~~~~~~~~~~~~~~~~~~~~~~~~~
+users/jjibagar/jjibagar.h:22:42: error: initializer element is not constant
+   22 | #define LAYOUT_split_3x6_4_wrapper(...)  LAYOUT_split_3x6_4(__VA_ARGS__)
+      |                                          ^~~~~~~~~~~~~~~~~~
+./keyboards/sofle/keymaps/jjibagar/keymap.c:52:15: note: in expansion of macro 'LAYOUT_split_3x6_4_wrapper'
+   52 |   [_ADJUST] = LAYOUT_split_3x6_4_wrapper(
+      |               ^~~~~~~~~~~~~~~~~~~~~~~~~~
+users/jjibagar/jjibagar.h:22:42: note: (near initialization for 'keymaps[3][0][0]')
+   22 | #define LAYOUT_split_3x6_4_wrapper(...)  LAYOUT_split_3x6_4(__VA_ARGS__)
+      |                                          ^~~~~~~~~~~~~~~~~~
+./keyboards/sofle/keymaps/jjibagar/keymap.c:52:15: note: in expansion of macro 'LAYOUT_split_3x6_4_wrapper'
+   52 |   [_ADJUST] = LAYOUT_split_3x6_4_wrapper(
+      |               ^~~~~~~~~~~~~~~~~~~~~~~~~~
+users/jjibagar/jjibagar.h:22:42: error: initializer element is not constant
+   22 | #define LAYOUT_split_3x6_4_wrapper(...)  LAYOUT_split_3x6_4(__VA_ARGS__)
+      |                                          ^~~~~~~~~~~~~~~~~~
+./keyboards/sofle/keymaps/jjibagar/keymap.c:60:14: note: in expansion of macro 'LAYOUT_split_3x6_4_wrapper'
+   60 |   [_EMACS] = LAYOUT_split_3x6_4_wrapper(
+      |              ^~~~~~~~~~~~~~~~~~~~~~~~~~
+users/jjibagar/jjibagar.h:22:42: note: (near initialization for 'keymaps[4][0][0]')
+   22 | #define LAYOUT_split_3x6_4_wrapper(...)  LAYOUT_split_3x6_4(__VA_ARGS__)
+      |                                          ^~~~~~~~~~~~~~~~~~
+./keyboards/sofle/keymaps/jjibagar/keymap.c:60:14: note: in expansion of macro 'LAYOUT_split_3x6_4_wrapper'
+   60 |   [_EMACS] = LAYOUT_split_3x6_4_wrapper(
+      |              ^~~~~~~~~~~~~~~~~~~~~~~~~~
+users/jjibagar/jjibagar.h:22:42: error: initializer element is not constant
+   22 | #define LAYOUT_split_3x6_4_wrapper(...)  LAYOUT_split_3x6_4(__VA_ARGS__)
+      |                                          ^~~~~~~~~~~~~~~~~~
+./keyboards/sofle/keymaps/jjibagar/keymap.c:67:12: note: in expansion of macro 'LAYOUT_split_3x6_4_wrapper'
+   67 |   [_NUM] = LAYOUT_split_3x6_4_wrapper(
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~~
+users/jjibagar/jjibagar.h:22:42: note: (near initialization for 'keymaps[5][0][0]')
+   22 | #define LAYOUT_split_3x6_4_wrapper(...)  LAYOUT_split_3x6_4(__VA_ARGS__)
+      |                                          ^~~~~~~~~~~~~~~~~~
+./keyboards/sofle/keymaps/jjibagar/keymap.c:67:12: note: in expansion of macro 'LAYOUT_split_3x6_4_wrapper'
+   67 |   [_NUM] = LAYOUT_split_3x6_4_wrapper(
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~~
+users/jjibagar/jjibagar.h:22:42: error: initializer element is not constant
+   22 | #define LAYOUT_split_3x6_4_wrapper(...)  LAYOUT_split_3x6_4(__VA_ARGS__)
+      |                                          ^~~~~~~~~~~~~~~~~~
+./keyboards/sofle/keymaps/jjibagar/keymap.c:74:15: note: in expansion of macro 'LAYOUT_split_3x6_4_wrapper'
+   74 |   [_JUEGOS] = LAYOUT_split_3x6_4_wrapper(
+      |               ^~~~~~~~~~~~~~~~~~~~~~~~~~
+users/jjibagar/jjibagar.h:22:42: note: (near initialization for 'keymaps[6][0][0]')
+   22 | #define LAYOUT_split_3x6_4_wrapper(...)  LAYOUT_split_3x6_4(__VA_ARGS__)
+      |                                          ^~~~~~~~~~~~~~~~~~
+./keyboards/sofle/keymaps/jjibagar/keymap.c:74:15: note: in expansion of macro 'LAYOUT_split_3x6_4_wrapper'
+   74 |   [_JUEGOS] = LAYOUT_split_3x6_4_wrapper(
+      |               ^~~~~~~~~~~~~~~~~~~~~~~~~~
+cc1: all warnings being treated as errors
+ [ERRORS]
+ | 
+ | 
+ | 
+gmake[1]: *** [builddefs/common_rules.mk:361: .build/obj_sofle_keyhive_jjibagar/quantum/keymap_introspection.o] Error 1
+Make finished with errors
+gmake: *** [Makefile:392: sofle/keyhive:jjibagar] Error 1
