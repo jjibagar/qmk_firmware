@@ -1,0 +1,19 @@
+MOUSEKEY_ENABLE = yes
+EXTRAKEY_ENABLE = yes
+CONSOLE_ENABLE = no
+#el encoder por defecto es yes
+ENCODER_ENABLE = yes
+LTO_ENABLE = yes
+OLED_ENABLE = no
+OLED_DRIVER = SSD1306
+
+#Sparkfun Config
+CONVERT_TO=promicro_rp2040
+BOOTLOADER = rp2040
+
+
+#nuevo para intentar arreglar el error de RGB_MATRIX
+RGBLIGHT_ENABLE = no
+# RGB_MATRIX_ENABLE = yes
+RGB_MATRIX_DRIVER = IS31FL3731
+# RGB_MATRIX_ENABLE = IS31FL3731
