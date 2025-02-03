@@ -8,8 +8,6 @@ enum {
      ALT_LP, // Our example key: LALT when held, ( when tapped. Add additional keycodes for each tapdance.
     CTRL_LP,
     LSFT_LP,
-    GUI_LP,//esto es nuevo
-    GUI_HR,
     CTRL_HR,
     LSFT_HR,
     ALT_HR,
@@ -52,7 +50,4 @@ void alt_lp_finished(tap_dance_state_t *state, void *user_data);
 void alt_lp_reset(tap_dance_state_t *state, void *user_data);
 void ctrl_lp_finished(tap_dance_state_t *state, void *user_data);
 void ctrl_lp_reset(tap_dance_state_t *state, void *user_data);
-// estos son nuevos
-void gui_lp_finished(tap_dance_state_t *state, void *user_data);
-void gui_lp_reset(tap_dance_state_t *state, void *user_data);
 

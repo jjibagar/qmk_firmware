@@ -1,33 +1,117 @@
-#pragma once
 
- /* Copyright 2021 Dane Evans
-  *
-  * This program is free software: you can redistribute it and/or modify
-  * it under the terms of the GNU General Public License as published by
-  * the Free Software Foundation, either version 2 of the License, or
-  * (at your option) any later version.
-  *
-  * This program is distributed in the hope that it will be useful,
-  * but WITHOUT ANY WARRANTY; without even the implied warranty of
-  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-  * GNU General Public License for more details.
-  *
-  * You should have received a copy of the GNU General Public License
-  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
-*/
+// esto me da problemas, si no lo quito no compila
+// alfred lo tiene en jjibañez.c y en el keymap
+#include "jjibagar.h"
+//#include "muse.h"
+//#include "keymap_spanish_dvorak.h"
+//#include "sendstring_spanish_dvorak.h"
+//#include "combos.c"
 
 
 
-//#define USE_MATRIX_I2C
+// clang-format on
+layer_state_t layer_state_set_user(layer_state_t state) { return update_tri_layer_state(state, _LOWER, _RAISE, _ADJUST); }
 
-/* Select hand configuration */
+/********************************************************************************/
+/* // Left encoder scrolls the mousewheel. Right encoder adjusts underglow hue. */
+/* bool encoder_update_user(uint8_t index, bool clockwise) {		        */
+/*     if (index == 0) {						        */
+/*         if (clockwise) {						        */
+/* #ifdef MOUSEKEY_ENABLE						        */
+/*             tap_code(KC_MS_WH_DOWN);					        */
+/* #else								        */
+/*             tap_code(KC_PGDN);					        */
+/* #endif								        */
+/*         } else {							        */
+/* #ifdef MOUSEKEY_ENABLE						        */
+/*             tap_code(KC_MS_WH_UP);					        */
+/* #else								        */
+/*             tap_code(KC_PGUP);					        */
+/* #endif								        */
+/*         }								        */
+/*     } else {  // index = 1: right encoder				        */
+/*         if (clockwise) {						        */
+/* #ifdef RGB_MATRIX_ENABLE						        */
+/*             rgb_matrix_step();					        */
+/* #else								        */
+/*             rgblight_increase_hue_noeeprom();			        */
+/* #endif								        */
+/*         } else {							        */
+/* #ifdef RGB_MATRIX_ENABLE						        */
+/*             rgb_matrix_step_reverse();				        */
+/* #else								        */
+/*             rgblight_decrease_hue_noeeprom();			        */
+/* #endif								        */
+/*         }								        */
+/*     }								        */
+/*     return false;							        */
+/* }									        */
+/********************************************************************************/
 
-///https://thomasbaart.nl/2018/12/01/reducing-firmware-size-in-qmk/
+// Set underglow color to blue. Modificado
+#ifdef RGB_MATRIX_ENABLE
+void keyboard_post_init_user(void) { rgblight_sethsv_noeeprom(RGBLIGHT_DEFAULT_COLOR); }
+#endif // RGB_MATRIX_ENABLE
 
 
-#define MASTER_LEFT
-// #define MASTER_RIGHT
-// #define EE_HANDS
+// prueba RGB
+// dessde aqui
+
+int RGB_current_mode;
+
+// Setting ADJUST layer RGB back to default
+void update_tri_layer_RGB(uint8_t layer1, uint8_t layer2, uint8_t layer3) {
+  if (IS_LAYER_ON(layer1) && IS_LAYER_ON(layer2)) {
+    layer_on(layer3);
+  } else {
+    layer_off(layer3);
+  }
+}
+
+void matrix_init_user(void) {
+
+   //    set_unicode_input_mode(UC_LNX); 
+      
+}
+
+bool rgb_matrix_indicators_user(void) {
+  #ifdef RGB_MATRIX_ENABLE
+  switch (biton32(layer_state)) {
+    case _RAISE:
+      for (int i = 0; i < RGB_MATRIX_LED_COUNT; i++) {
+          rgb_matrix_set_color(i, 255, 0, 0);
+      }
+      return true;
+     case _LOWER:
+      for (int i = 0; i < RGB_MATRIX_LED_COUNT; i++) {
+	  rgb_matrix_set_color(i, 0, 0, 255);
+      }
+       return true;
+     /* case _ADJUST: */
+     /*  for (int i = 0; i < RGB_MATRIX_LED_COUNT; i++) { */
+     /*     rgb_matrix_set_color(i, 20, 0, 0); */
+      /* } */
+      /* break; */
+    default:
+        if (host_keyboard_led_state().caps_lock) {
+                  for (int i = 0; i < RGB_MATRIX_LED_COUNT; i++) {
+          rgb_matrix_set_color(i, 0, 255, 0);
+		  } 
+       } else {
+        for (int i = 0; i < RGB_MATRIX_LED_COUNT; i++) {
+          rgb_matrix_set_color(i, 0, 0, 0);
+       }
+	return true;
+    } 
+  } 
+  #endif
+  return true;
+}
+
+// FIN DE PRUEBA RGB
+
+
+// Prueba rgb del sofle
 
 #define CUSTOM_FONT
 
@@ -81,7 +165,6 @@
     #define RGBLIGHT_VAL_STEP 17
 #endif
 
-// he comentado rgb_matrix
 #ifdef RGB_MATRIX_ENABLE
 #   define RGB_MATRIX_KEYPRESSES // reacts to keypresses
 // #   define RGB_MATRIX_KEYRELEASES // reacts to keyreleases (instead of keypresses)

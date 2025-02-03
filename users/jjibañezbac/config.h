@@ -1,9 +1,9 @@
 
 #pragma once
 
-#define ENCODER_RESOLUTION 2
-//#define RGBLIGHT_DEFAULT_MODE RGBLIGHT_MODE_BREATHING
-//#define RGBLIGHT_DEFAULT_COLOR HSV_BLUE
+#define ENCODER_RESOLUTION 4
+#define RGBLIGHT_DEFAULT_MODE RGBLIGHT_MODE_BREATHING
+#define RGBLIGHT_DEFAULT_COLOR HSV_BLUE
 
 
 // tienes que personalizar le tapping, bajarlo a 180 los que sean el menique

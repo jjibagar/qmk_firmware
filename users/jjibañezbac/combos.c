@@ -1,20 +1,7 @@
 
-#include"jjibagar.h"
-//#include "keymap_spanish_dvorak.h"
-//#include "sendstring_spanish_dvorak.h"
-
-
-#ifdef COMBO_ENABLE
-
-enum combos {
-  CB_ALTGR_ONE_SHOT,
-  CB_DVK_TIL_A,
-  CB_DVK_TIL_O,
-  CB_DVK_TIL_E,
-  CB_DVK_TIL_U,
-  CB_DVK_TIL_I,
-  COMBO_LENGTH
-};
+#include"jjibañez.h"
+#include "keymap_spanish_dvorak.h"
+#include "sendstring_spanish_dvorak.h"
 
 uint16_t COMBO_LEN = COMBO_LENGTH;
 
@@ -36,5 +23,5 @@ combo_t key_combos[] = {
   [CB_DVK_TIL_E] = COMBO(dvk_e_til_combo, TIL_E ),
   [CB_DVK_TIL_U] = COMBO(dvk_u_til_combo, TIL_U),
   [CB_DVK_TIL_I] = COMBO(dvk_i_til_combo, TIL_I ),
+
 };
-#endif

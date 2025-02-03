@@ -1,0 +1,12 @@
+#+TITLE: Configuracion global de teclados
+#+LANGUAGE: ES
+#+description: cofiguracion de teclado unificada y centralizada en el que se recogen todas las posibilidades que puedo usar para que en cada keymap solo haya que introducir las referencias aqui recogidas
+
+* Por solucionar: [0%]
+
+- [ ] meter macros y config en jjibañez.c
+- [ ] meter capa de emacs
+- [ ] meter capa de juegos, ¿que se active con tap y desactive con doble tap en adjust?
+- [ ] cambiar a capa propia el numpad
+- [ ] arreglar capa de signos
+- [ ] desplazar cruceta

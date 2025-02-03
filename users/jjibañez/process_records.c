@@ -8,10 +8,11 @@ uint16_t alt_tab_timer=0;
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   if (record->event.pressed) {
-    
-#ifdef OLED_ENABLE
-      set_keylog(keycode, record);
-#endif
+
+// esto el sofle no se lo traga si lo comento puedo tener activado el oled
+//#ifdef OLED_ENABLE
+      //  set_keylog(keycode, record);
+//#endif
   
 #ifdef OLED_DRIVER_ENABLE
         oled_timer = timer_read32();

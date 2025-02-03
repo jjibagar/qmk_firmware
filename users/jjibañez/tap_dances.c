@@ -16,18 +16,17 @@ td_state_t cur_dance(tap_dance_state_t *state) {
 }
 // Handle the possible states for each tapdance keycode you define:
 // esto nos permite 3 estados en el tapdance, los estas usando en Control, Meta en la capa lower, mira que necesita dos funciones cada una 
-// mira que caracteres van en lower debajo de gui.
 void alt_lp_finished(tap_dance_state_t *state, void *user_data) {
     td_state = cur_dance(state);
     switch (td_state) {
         case TD_SINGLE_TAP:
-            register_code16(DV_IQUE);
+            register_code16(DV_QUES);
             break;
         case TD_SINGLE_HOLD:
             register_code16(KC_LALT);
             break;	           
         case TD_DOUBLE_SINGLE_TAP:         
-            register_code16(DV_QUES);
+            register_code16(DV_IQUE);
             break;
     case TD_UNKNOWN:
 	break;
@@ -37,13 +36,13 @@ void alt_lp_finished(tap_dance_state_t *state, void *user_data) {
 void alt_lp_reset(tap_dance_state_t *state, void *user_data) {
     switch (td_state) {
         case TD_SINGLE_TAP:
-            unregister_code16(DV_IQUE);
+            unregister_code16(DV_QUES);
             break;
         case TD_SINGLE_HOLD:
             unregister_code16(KC_LALT);
             break;	           
         case TD_DOUBLE_SINGLE_TAP:         
-            unregister_code16(DV_QUES);
+            unregister_code16(DV_IQUE);
             break;
     case TD_UNKNOWN:
 	break;
@@ -177,39 +176,6 @@ void alt_hr_reset(tap_dance_state_t *state, void *user_data) {
 	break;
 	    }
 }
-void gui_hr_finished(tap_dance_state_t *state, void *user_data) {
-    td_state = cur_dance(state);
-    switch (td_state) {
-        case TD_SINGLE_TAP:
-            register_code16(DV_LCBR);
-            break;
-        case TD_SINGLE_HOLD:
-	    
-            register_code16(KC_LGUI);
-            break;	           
-        case TD_DOUBLE_SINGLE_TAP:         
-            register_code16(DV_RCBR);
-            break;
-    case TD_UNKNOWN:
-	break;
-
-    }
-}
-void gui_hr_reset(tap_dance_state_t *state, void *user_data) {
-    switch (td_state) {
-        case TD_SINGLE_TAP:
-            unregister_code16(DV_LCBR);
-            break;
-        case TD_SINGLE_HOLD:
-            unregister_code16(KC_LGUI);
-            break;	           
-        case TD_DOUBLE_SINGLE_TAP:         
-            unregister_code16(DV_RCBR);
-            break;
-    case TD_UNKNOWN:
-	break;
-	    }
-}
 // Tap Dance definitions 
 tap_dance_action_t tap_dance_actions[] = {
     // Tap once for , twice for ; y lo mismo para el . y los : 
@@ -220,11 +186,11 @@ tap_dance_action_t tap_dance_actions[] = {
   [TD_PASTE]= ACTION_TAP_DANCE_DOUBLE(DV_Y, KC_PASTE),
 //simbolos lower
   [TD_INTE]=ACTION_TAP_DANCE_DOUBLE(DV_QUES, DV_IQUE),
-  [TD_EXCL]=ACTION_TAP_DANCE_DOUBLE(DV_IEXL,DV_EXLM),
+  [TD_EXCL]=ACTION_TAP_DANCE_DOUBLE(DV_EXLM,DV_IEXL),
 //  [TD_CORCH]=ACTION_TAP_DANCE_DOUBLE(DV_LBRC,DV_RBRC),
+[TD_LLAVE]=ACTION_TAP_DANCE_DOUBLE(DV_LCBR,DV_RCBR),
 // [TD_PAREN]=ACTION_TAP_DANCE_DOUBLE(DV_LPRN,DV_RPRN),
 //  [TD_MAYOR]=ACTION_TAP_DANCE_DOUBLE(DV_LABK,DV_RABK),
-//[TD_LLAVE]=ACTION_TAP_DANCE_DOUBLE(DV_LCBR,DV_RCBR),
   [TD_BIRG]=ACTION_TAP_DANCE_DOUBLE(DV_PIPE,DV_TILD),
   [TD_BARRA]=ACTION_TAP_DANCE_DOUBLE(DV_SLSH,DV_BSLS),
   [ALT_LP] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, alt_lp_finished, alt_lp_reset),
@@ -232,7 +198,8 @@ tap_dance_action_t tap_dance_actions[] = {
   //Configuramos los hold de homerow en lower
   [LSFT_HR]=ACTION_TAP_DANCE_FN_ADVANCED(NULL, lsft_hr_finished, lsft_hr_reset),
   [CTRL_HR]=ACTION_TAP_DANCE_FN_ADVANCED(NULL, ctrl_hr_finished, ctrl_hr_reset),
-  [ALT_HR]=ACTION_TAP_DANCE_FN_ADVANCED(NULL, alt_hr_finished, alt_hr_reset),
-  [GUI_HR]=ACTION_TAP_DANCE_FN_ADVANCED(NULL, gui_hr_finished, alt_hr_reset)
-  
+  [ALT_HR]=ACTION_TAP_DANCE_FN_ADVANCED(NULL, alt_hr_finished, alt_hr_reset)
 };
+
+
+

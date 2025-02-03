@@ -1,0 +1,58 @@
+* Unicorne
+cosas por ver
+- [ ] que es lo de reconocer dfu
+- [ ] como se exporta el .bin
+- [ ] 
+
+ Parece que se instala con este comando:
+
+  qmk compile -kb yanghu/unicorne -km uni-ii
+
+  dfu-util -a 0 -d feed:0204 -s 0x8000000:leave -D yanghu_unicorne_f411_uni-ii.bin
+  dfu-util -a 0 -d feed:0204 -s 0x8000000:leave -D yanghu_unicorne_f411_uni-cirque.bin
+
+parece que se puede hacer reiniciando, para ponerlo en modo bootloader
+
+https://www.youtube.com/watch?v=BOIGH7lL2BU
+
+
+[[https://docs.keeb.io/flashing-firmware][Flashing ATmega32u4 (DFU Bootloader)]]
+Zadig para instalar si tienes problemas
+** anuncio vender unicorne
+Vendo kit de montaje para el yanghu/unicorne.
+Caracteristicas:
+- compatible QMK y KMK.
+- color pcb y placas color negro 
+- Soldado de fabrica placa micro (arm-cortex), diodos...
+- Por soldar hotswap,led ,buzzer, OLED y reset
+- posibilidad de poner dos encoders
+  Precio del kit 65€
+* trackball
+** buscar sensor valido
+- este de aqui usa el conector fcc que es el del adaptador del cirque https://github.com/siderakb/pmw3360-pcb/tree/main
+- para la base y corona se puede imprimir lo de charybdis https://github.com/Bastardkb/charybdis-pmw-3360-sensor-pcb
+- PMW3360DM-T2QU este chip parece moderno y lo lleva montado este teclado https://www.hackster.io/news/this-split-ergonomic-mechanical-keyboard-features-a-trackball-mouse-f4a54fbf9976, tira de este hilo para el armazon del pmw3360dm.
+  github del teclado https://siderakb.github.io/docs/ergosnm/rev2, la pcb del trakcball es la siderakb. la version 3 es la buena, no te fies de la foto, lleva el conector del trackpad https://github.com/siderakb/pmw3360-pcb/blob/v3.1.0/README.md , comparar las salidas de ambos conectores para asegurarse que es la misma. Este es de 8pines, comprueba que el adaptador tambien recibe 8
+  
+
+* case madera
+- diseño
+  - muy chulo
+  - se queda en terreno de nadie
+- Reposa muñecas tal como esta solo le falta 2cm, con el molde anterior sobra
+- balanceo, no me preocupa con las almoadillas en la parte de abajo es suficiente, no se empuja en esos lados abajo
+- inclinacion incluida ,lo habia pensado, es lo suyo
+- separadores, son lo suyo
+* emacs
+mirar que es company-mode exactamente que roge se lo instale mejor que auto complete. Y tu pontelo obligatorio, quita auto-complete-mode. 
+uoeuoeu
+#+NAME: tab:tabla referencia
+#+CAPTION: nombre
+#+ATTR_LATEX: :booktabs h :center h :environment tabu :width \textwidth :align |r|c|c| :font \footnotesize
+| 34 | 43 |   |   |
+| 34 | 53 |   |   |
+|  3 | 22 |   |   |
+|  7 | 33 |   |   |
+|----+----+---+---|
+|  3 |  4 | 1 | 0 |
+#+TBLFM: $3=($2-$1)::@5$4=vsum(@1$3..@4$3)

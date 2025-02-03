@@ -20,7 +20,7 @@ uint16_t COMBO_LEN = COMBO_LENGTH;
 
 // Combo funcionts
 const uint16_t PROGMEM altg_oneshot[] = {DV_I, DV_D, COMBO_END};
-const uint16_t PROGMEM dvk_a_til_combo[] = {DV_A, RSFT_T(DV_R), COMBO_END};
+const uint16_t PROGMEM dvk_a_til_combo[] = {LGUI_T(DV_A), RSFT_T(DV_R), COMBO_END};
 const uint16_t PROGMEM dvk_o_til_combo[] = {LALT_T(DV_O), RSFT_T(DV_R), COMBO_END};
 const uint16_t PROGMEM dvk_e_til_combo[] = {LCTL_T(DV_E), RSFT_T(DV_R), COMBO_END};
 const uint16_t PROGMEM dvk_u_til_combo[] = {LSFT_T(DV_U), RSFT_T(DV_R), COMBO_END};

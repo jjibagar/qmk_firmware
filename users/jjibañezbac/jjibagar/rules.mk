@@ -18,8 +18,7 @@ NKRO_ENABLE= yes
 TAP_DANCE_ENABLE = yes
 SLEEP_LED_ENABLE = yes
 
-# el encoder mejor activarlo en cada teclado
-# ENCODER_ENABLE=yes
+ENCODER_ENABLE=yes
 #LTO_ENABLE = yes
 # significantly reduce the compiled size,but disable the legacy TMK Macros and Functions features
 # de momento lo dejo encendido porque no creo que me falte memoria
@@ -31,6 +30,8 @@ SLEEP_LED_ENABLE = yes
 # activo los combos para lo de i+d
  COMBO_ENABLE = yes
 
+RGBLIGHT_ENABLE = no
+RGB_MATRIX_ENABLE = yes
 
 # no se para que vale muse, lo he puesto por alfred
 ifdef AUDIO_ENABLE

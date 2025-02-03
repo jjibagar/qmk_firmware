@@ -21,22 +21,3 @@
 * guia unicorne
                       [[file:Por_solucionar:_\[12%\]/2024-02-04_13-57-42_Montaje unicorne.org]]
 * Analisis de ninjonas [50%]
-- [X] en glabal:
-  - tiene las llamadas a los .c solo en el rules del global
-    src += ninjonas.c \
-       process_records.c \
-       tap_dances.c \
-       oled.c \
-       encoder.c \
-       combos.c
-  - en todos los .c hay llamadas a nombre.h
-  - tiene todas las llamadas a los .h solo en nombre. 
-  - a su vez en todos los .h tiene llamadas a nombre.h y es la unica llamada que tienen
-  - las definiciones estan cada una en su .h, las layers.h estan en nombre.h
-  - #pragma once esta en todas las .h
-  - tiene el process record tambien aparte, por lo que en ninjonas.c solo tiene configuardo el rgb 
-    
-- [ ] En local, del corne:
-  - en el keymap tiene solo llamadas a  QMK_KEYBOARD_H -> esta es la unica llamada a esta 
-                                        "ninjonas.h"                                     
-- [ ] 
