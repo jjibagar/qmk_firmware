@@ -12,8 +12,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 	_____BASE_I2_____		_____BASE_D2_____
 	_____BASE_I3_____		_____BASE_D3_____
 	_____BASE_I4_____		_____BASE_D4_____
-  ),
-
+      ),
 /*   Capa de simbolos (lower)
     |¿?| ! | "  | · | $ | % |
     |& | ()| {} | <>|[] |"|"| 
@@ -24,14 +23,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 	_____LOWER_I2_____     		_____LOWER_D2_____
 	_____LOWER_I3_____              _____LOWER_D3_____       
 	_____LOWER_I4_____ 		_____LOWER_D4_____
-  ),  
+      ),  
 
   [_RAISE] = LAYOUT_split_3x6_4_wrapper(
 	_____RAISE_I1_____		_____RAISE_D1_____
 	_____RAISE_I2_____		_____RAISE_D2_____
 	_____RAISE_I3_____		_____RAISE_D3_____
 	_____RAISE_I4_____		_____RAISE_D4_____
-  ),
+      ),
 
   [_ADJUST] = LAYOUT_split_3x6_4_wrapper(
         _____ADJUST_I1_____		_____ADJUST_D1_____
@@ -54,11 +53,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 	_____NUM_I4_____	_____NUM_D4_____
       ),
   [_JUEGOS] = LAYOUT_split_3x6_4_wrapper(
-_____JUEGOS_I1_____	_____JUEGOS_D1_____
-_____JUEGOS_I2_____	_____JUEGOS_D2_____
-_____JUEGOS_I3_____	_____JUEGOS_D3_____
-_____JUEGOS_I4_____	_____JUEGOS_D4_____
-     )
+      _____JUEGOS_I1_____	_____JUEGOS_D1_____
+      _____JUEGOS_I2_____	_____JUEGOS_D2_____
+      _____JUEGOS_I3_____	_____JUEGOS_D3_____
+      _____JUEGOS_I4_____	_____JUEGOS_D4_____
+      )
 };      
       
      

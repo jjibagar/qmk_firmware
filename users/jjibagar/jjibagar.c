@@ -1,17 +1,16 @@
-
-// esto me da problemas, si no lo quito no compila
-// alfred lo tiene en jjibañez.c y en el keymap
 #include "jjibagar.h"
 //#include "muse.h"
 //#include "keymap_spanish_dvorak.h"
 //#include "sendstring_spanish_dvorak.h"
 //#include "combos.c"
 
-
-
-// clang-format on
+/*Esta función es una utilidad proporcionada por QMK para manejar una capa tri-layer.
+Una capa tri-layer es una capa que se activa solo cuando dos capas específicas están activas simultáneamente.*/
 layer_state_t layer_state_set_user(layer_state_t state) { return update_tri_layer_state(state, _LOWER, _RAISE, _ADJUST); }
 
+// clang-format on
+// esto me da problemas, si no lo quito no compila
+// alfred lo tiene en jjibañez.c y en el keymap
 /********************************************************************************/
 /* // Left encoder scrolls the mousewheel. Right encoder adjusts underglow hue. */
 /* bool encoder_update_user(uint8_t index, bool clockwise) {		        */

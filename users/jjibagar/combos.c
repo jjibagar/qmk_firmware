@@ -27,9 +27,7 @@ const uint16_t PROGMEM dvk_u_til_combo[] = {LSFT_T(DV_U), RSFT_T(DV_R), COMBO_EN
 const uint16_t PROGMEM dvk_i_til_combo[] = {DV_I, RSFT_T(DV_R), COMBO_END};
 
 
-combo_t key_combos[] = {
-    
-
+combo_t key_combos[] = {   
   [CB_ALTGR_ONE_SHOT] = COMBO(altg_oneshot, ALTGR_ONE_SHOT ),
   [CB_DVK_TIL_A] = COMBO(dvk_a_til_combo, TIL_A ),
   [CB_DVK_TIL_O] = COMBO(dvk_o_til_combo, TIL_O ),

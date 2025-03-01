@@ -15,7 +15,7 @@ td_state_t cur_dance(tap_dance_state_t *state) {
     else return TD_UNKNOWN; // Any number higher than the maximum state value you return above
 }
 // Handle the possible states for each tapdance keycode you define:
-// esto nos permite 3 estados en el tapdance, los estas usando en Control, Meta en la capa lower, mira que necesita dos funciones cada una 
+// esto nos permite 3 estados en el tapdance, los estas usando en Control, Meta y super en la capa lower, mira que necesita dos funciones cada una 
 // mira que caracteres van en lower debajo de gui.
 void alt_lp_finished(tap_dance_state_t *state, void *user_data) {
     td_state = cur_dance(state);
@@ -159,7 +159,6 @@ void alt_hr_finished(tap_dance_state_t *state, void *user_data) {
             break;
     case TD_UNKNOWN:
 	break;
-
     }
 }
 void alt_hr_reset(tap_dance_state_t *state, void *user_data) {
@@ -183,8 +182,7 @@ void gui_hr_finished(tap_dance_state_t *state, void *user_data) {
         case TD_SINGLE_TAP:
             register_code16(DV_LCBR);
             break;
-        case TD_SINGLE_HOLD:
-	    
+        case TD_SINGLE_HOLD:	    
             register_code16(KC_LGUI);
             break;	           
         case TD_DOUBLE_SINGLE_TAP:         
@@ -192,7 +190,6 @@ void gui_hr_finished(tap_dance_state_t *state, void *user_data) {
             break;
     case TD_UNKNOWN:
 	break;
-
     }
 }
 void gui_hr_reset(tap_dance_state_t *state, void *user_data) {
@@ -233,6 +230,5 @@ tap_dance_action_t tap_dance_actions[] = {
   [LSFT_HR]=ACTION_TAP_DANCE_FN_ADVANCED(NULL, lsft_hr_finished, lsft_hr_reset),
   [CTRL_HR]=ACTION_TAP_DANCE_FN_ADVANCED(NULL, ctrl_hr_finished, ctrl_hr_reset),
   [ALT_HR]=ACTION_TAP_DANCE_FN_ADVANCED(NULL, alt_hr_finished, alt_hr_reset),
-  [GUI_HR]=ACTION_TAP_DANCE_FN_ADVANCED(NULL, gui_hr_finished, alt_hr_reset)
-  
+  [GUI_HR]=ACTION_TAP_DANCE_FN_ADVANCED(NULL, gui_hr_finished, gui_hr_reset)
 };

@@ -1,10 +1,20 @@
-* Unicorne
-cosas por ver
-- [ ] que es lo de reconocer dfu
-- [ ] como se exporta el .bin
-- [ ] 
 
- Parece que se instala con este comando:
+* Hacer push con git
+- git add .
+- git commit -m "cambios"
+- git push
+
+* Unicorne
+** cosas por ver
+- [ ] pasar capa juegos debajo de base
+- [ ] teclado para cambio de capa, miro tipo 25keys/zinc/default
+** Registro de cambios reparacion cambio de capa:
+- tipos de cambios de capa
+  - en los archivos tapdance he configurado algunoñ
+  - el process records he puesto un tipo de cambio de capa borrar nombres declarados asociados
+
+** comandos compilacion
+Parece que se instala con este comando:
 
   qmk compile -kb yanghu/unicorne -km uni-ii
 
@@ -56,11 +66,6 @@ uoeuoeu
 |----+----+---+---|
 |  3 |  4 | 1 | 0 |
 #+TBLFM: $3=($2-$1)::@5$4=vsum(@1$3..@4$3)
-* Hacer push con git
-- git git .
-- add commit -m "cambios"
-- git push
-
 * Raton de bola
 - suplente del tdl de toshiba→ TLV70019DDCR de texas instrument
 - las resistencias que faltan creo que son C226392 segun denominacion de JLCPCB

@@ -38,6 +38,9 @@
 //#define UNICODE_SELECTED_MODES UNICODE_MODE_LINUX
 
 // configuración cirque
+#define CIRQUE_PINNACLE_POSITION_MODE CIRQUE_PINNACLE_RELATIVE_MODE
+// Hacerlo relativo o absoluto lleva diferentes caracteristicas
+/#define CIRQUE_PINNACLE_POSITION_MODE CIRQUE_PINNACLE_ABSOLUTE_MODE
 #define POINTING_DEVICE_ROTATION_90
 #define POINTING_DEVICE_INVERT_X
 #define POINTING_DEVICE_INVERT_Y
@@ -47,5 +50,5 @@
 #define CIRQUE_PINNACLE_TAP_ENABLE
 #define POINTING_DEVICE_GESTURES_SCROLL_ENABLE
 
-// a ver si con esto va
-#define CIRQUE_PINNACLE_ADDR 0x2A
+// a ver si con esto va, probar de nuevo si crees necesario
+/ #define CIRQUE_PINNACLE_ADDR 0x2A

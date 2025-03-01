@@ -19,7 +19,9 @@ enum {
     TD_PTO,
     TD_GUION,
     TD_COPY,
-    TD_PASTE
+    TD_PASTE,
+    TD_BASE,
+    TD_JUEGOS
 };
 enum custom_keycodes {
     KC_QWERTY = SAFE_RANGE,

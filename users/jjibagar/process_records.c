@@ -19,6 +19,19 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     // set_timelog();
   }
 switch (keycode) {
+     case JUEGOS:
+      if (record->event.pressed) {
+        set_single_persistent_default_layer(_JUEGOS);
+      }
+      return false;
+      break;
+    case BASE:
+      if (record->event.pressed) {
+        set_single_persistent_default_layer(_BASE);
+      }
+      return false;
+      break;
+      //hasta aqui Prueba
 case ALTGR_ONE_SHOT:
           if (record->event.pressed) {
               set_oneshot_mods(MOD_BIT(KC_RALT));

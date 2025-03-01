@@ -25,3 +25,6 @@
 	path = lib/lvgl
 	url = https://github.com/qmk/lvgl.git
 	branch = release/v8.2
+[submodule "keyboards/yanghu/unicorne/keymaps/uni-ii"]
+	   path= keyboards/yanghu/unicorne/keymaps/uni-ii
+	   url =https://github.com/qmk/yanghu/unicorne/unicorne.git 

@@ -21,6 +21,8 @@ enum {
     TD_GUION,
     TD_COPY,
     TD_PASTE,
+    TD_BASE,
+    TD_JUEGOS,
     //tapdance de simbolos lower
     TD_INTE,
     TD_EXCL,
@@ -53,6 +55,6 @@ void alt_lp_reset(tap_dance_state_t *state, void *user_data);
 void ctrl_lp_finished(tap_dance_state_t *state, void *user_data);
 void ctrl_lp_reset(tap_dance_state_t *state, void *user_data);
 // estos son nuevos
-void gui_lp_finished(tap_dance_state_t *state, void *user_data);
-void gui_lp_reset(tap_dance_state_t *state, void *user_data);
+// void gui_lp_finished(tap_dance_state_t *state, void *user_data);
+// void gui_lp_reset(tap_dance_state_t *state, void *user_data);
 

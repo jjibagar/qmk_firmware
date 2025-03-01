@@ -198,7 +198,8 @@ tap_dance_action_t tap_dance_actions[] = {
   //Configuramos los hold de homerow en lower
   [LSFT_HR]=ACTION_TAP_DANCE_FN_ADVANCED(NULL, lsft_hr_finished, lsft_hr_reset),
   [CTRL_HR]=ACTION_TAP_DANCE_FN_ADVANCED(NULL, ctrl_hr_finished, ctrl_hr_reset),
-  [ALT_HR]=ACTION_TAP_DANCE_FN_ADVANCED(NULL, alt_hr_finished, alt_hr_reset)
+  [ALT_HR]=ACTION_TAP_DANCE_FN_ADVANCED(NULL, alt_hr_finished, alt_hr_reset),
+   [GUI_HR]=ACTION_TAP_DANCE_FN_ADVANCED(NULL, gui_hr_finished, gui_hr_reset)
 };
 
 

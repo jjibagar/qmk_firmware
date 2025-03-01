@@ -58,9 +58,9 @@ enum td_keycodes {
 #define RAISE MO(_RAISE)
 #define ADJUST MO(_ADJUST)
 #define EMACS MO(_EMACS)
-#define JUEGOS MO(_JUEGOS)
+#define JUEGOS DF(_JUEGOS)
 #define NUM MO(_NUM)
-
+#define BASE DF(_BASE)
 // When you add source files to SRC in rules.mk, you can use functions.
 const char *read_layer_state(void);
 const char *read_logo(void);
