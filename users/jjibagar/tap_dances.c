@@ -127,7 +127,6 @@ void ctrl_hr_finished(tap_dance_state_t *state, void *user_data) {
             break;
     case TD_UNKNOWN:
 	break;
-
     }
 }
 void ctrl_hr_reset(tap_dance_state_t *state, void *user_data) {
@@ -143,7 +142,7 @@ void ctrl_hr_reset(tap_dance_state_t *state, void *user_data) {
             break;
     case TD_UNKNOWN:
 	break;
-	    }
+    }
 }
 void alt_hr_finished(tap_dance_state_t *state, void *user_data) {
     td_state = cur_dance(state);
@@ -162,18 +161,18 @@ void alt_hr_finished(tap_dance_state_t *state, void *user_data) {
     }
 }
 void alt_hr_reset(tap_dance_state_t *state, void *user_data) {
-    switch (td_state) {
-        case TD_SINGLE_TAP:
-            unregister_code16(DV_LABK);
-            break;
-        case TD_SINGLE_HOLD:
-            unregister_code16(KC_LALT);
-            break;	           
-        case TD_DOUBLE_SINGLE_TAP:         
-            unregister_code16(DV_RABK);
-            break;
-    case TD_UNKNOWN:
-	break;
+  switch (td_state) {
+  case TD_SINGLE_TAP:
+    unregister_code16(DV_LABK);
+    break;
+  case TD_SINGLE_HOLD:
+    unregister_code16(KC_LALT);
+    break;	           
+  case TD_DOUBLE_SINGLE_TAP:         
+    unregister_code16(DV_RABK);
+    break;
+  case TD_UNKNOWN:
+    break;
 	    }
 }
 void gui_hr_finished(tap_dance_state_t *state, void *user_data) {

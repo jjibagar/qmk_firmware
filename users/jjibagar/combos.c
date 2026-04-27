@@ -3,7 +3,6 @@
 //#include "keymap_spanish_dvorak.h"
 //#include "sendstring_spanish_dvorak.h"
 
-
 #ifdef COMBO_ENABLE
 
 enum combos {
@@ -32,7 +31,7 @@ combo_t key_combos[] = {
   [CB_DVK_TIL_A] = COMBO(dvk_a_til_combo, TIL_A ),
   [CB_DVK_TIL_O] = COMBO(dvk_o_til_combo, TIL_O ),
   [CB_DVK_TIL_E] = COMBO(dvk_e_til_combo, TIL_E ),
-  [CB_DVK_TIL_U] = COMBO(dvk_u_til_combo, TIL_U),
+  [CB_DVK_TIL_U] = COMBO(dvk_u_til_combo, TIL_U ),
   [CB_DVK_TIL_I] = COMBO(dvk_i_til_combo, TIL_I ),
 };
 #endif

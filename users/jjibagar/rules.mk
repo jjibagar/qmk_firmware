@@ -27,18 +27,17 @@ ENCODER_ENABLE=yes
  UNICODE_ENABLE = yes
 # UNICODEMAP_ENABLE = yes // OTRA FORMA DE UNICODE CON MAS SIMBOLOS INCOMPATIBLE CON UNICODE_ENABLE
 
-# activo los combos para lo de i+d
- COMBO_ENABLE = yes
-
-RGBLIGHT_ENABLE = no
-RGB_MATRIX_ENABLE = yes
-
-# no se para que vale muse, lo he puesto por alfred
-ifdef AUDIO_ENABLE
-	SRC += muse.c
-endif
-
 # esto es de la guia, no se si es necesario, es para cancelar mascros creo
 # ifeq ($(strip $(MACROS_ENABLED)), yes)
 #    OPT_DEFS += -DMACROS_ENABLED
+# endif
+
+# lo siguiente lo paso a local
+# activo los combos para lo de i+d
+#  COMBO_ENABLE = yes
+# RGBLIGHT_ENABLE = no
+# RGB_MATRIX_ENABLE = yes
+# no se para que vale muse, lo he puesto por alfred
+# ifdef AUDIO_ENABLE
+# 	SRC += muse.c
 # endif

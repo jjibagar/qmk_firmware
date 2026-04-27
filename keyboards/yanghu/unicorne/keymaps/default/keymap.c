@@ -90,3 +90,4 @@ bool encoder_update_user(uint8_t index, bool clockwise) {
 
 // Set underglow color to blue.
 void keyboard_post_init_user(void) { rgblight_sethsv_noeeprom(RGBLIGHT_DEFAULT_COLOR); }
+
