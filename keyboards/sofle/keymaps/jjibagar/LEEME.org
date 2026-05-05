@@ -1,0 +1,10 @@
+** Pimoroni
+A fecha de mayo de 2026 se usa una version de qmk anticuada.
+Características:
+- solo he configurado el escroll
+- LLeva codigo en keymap, rules y config.h
+- la base es la del keymap de sofle-pimoroni-mod
+  - aqui se incluyo una carpeta con features, tu lo has metido todo en keymap.c
+- es imprescindible el archivo mcuconf.h
+- en keymap con el / 2, 4, 6... se aumenta el suavizado
+  
